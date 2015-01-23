@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 66d70b66abe24ae45991c51434422ba0
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm_Right
+    100002: Arm_Right1
+    100004: Body1
+    100006: BodyArmor
+    100008: BodyArmorConnector
+    100010: Hand_Right
+    100012: Hand_Right1
+    100014: Head1
+    100016: Helmet_Forehead
+    100018: Helmet_Inner
+    100020: Helmet_Left
+    100022: Helmet_Right
+    100024: Leg_Right
+    100026: Leg_Right1
+    100028: pasted__pCube4
+    100030: pasted__pCube4 1
+    100032: pCube1
+    100034: pCube1 1
+    100036: pCube10
+    100038: pCube10 1
+    100040: pCube11
+    100042: pCube11 1
+    100044: pCube12
+    100046: pCube12 1
+    100048: pCube13
+    100050: pCube14
+    100052: pCube15
+    100054: pCube16
+    100056: pCube17
+    100058: pCube18
+    100060: pCube19
+    100062: pCube2
+    100064: pCube2 1
+    100066: pCube20
+    100068: pCube21
+    100070: pCube22
+    100072: pCube23
+    100074: pCube25
+    100076: pCube26
+    100078: pCube4
+    100080: pCube5
+    100082: pCube6
+    100084: pCube8
+    100086: pCube8 1
+    100088: pCylinder1
+    100090: pCylinder3
+    100092: polySurface1
+    100094: polySurface10
+    100096: polySurface11
+    100098: polySurface12
+    100100: polySurface13
+    100102: polySurface15
+    100104: polySurface2
+    100106: polySurface3
+    100108: polySurface8
+    100110: polySurface8 1
+    100112: //RootNode
+    100114: Shoulder_Right
+    100116: Shoulder_Right1
+    400000: Arm_Right
+    400002: Arm_Right1
+    400004: Body1
+    400006: BodyArmor
+    400008: BodyArmorConnector
+    400010: Hand_Right
+    400012: Hand_Right1
+    400014: Head1
+    400016: Helmet_Forehead
+    400018: Helmet_Inner
+    400020: Helmet_Left
+    400022: Helmet_Right
+    400024: Leg_Right
+    400026: Leg_Right1
+    400028: pasted__pCube4
+    400030: pasted__pCube4 1
+    400032: pCube1
+    400034: pCube1 1
+    400036: pCube10
+    400038: pCube10 1
+    400040: pCube11
+    400042: pCube11 1
+    400044: pCube12
+    400046: pCube12 1
+    400048: pCube13
+    400050: pCube14
+    400052: pCube15
+    400054: pCube16
+    400056: pCube17
+    400058: pCube18
+    400060: pCube19
+    400062: pCube2
+    400064: pCube2 1
+    400066: pCube20
+    400068: pCube21
+    400070: pCube22
+    400072: pCube23
+    400074: pCube25
+    400076: pCube26
+    400078: pCube4
+    400080: pCube5
+    400082: pCube6
+    400084: pCube8
+    400086: pCube8 1
+    400088: pCylinder1
+    400090: pCylinder3
+    400092: polySurface1
+    400094: polySurface10
+    400096: polySurface11
+    400098: polySurface12
+    400100: polySurface13
+    400102: polySurface15
+    400104: polySurface2
+    400106: polySurface3
+    400108: polySurface8
+    400110: polySurface8 1
+    400112: //RootNode
+    400114: Shoulder_Right
+    400116: Shoulder_Right1
+    2300000: Arm_Right
+    2300002: Arm_Right1
+    2300004: Body1
+    2300006: BodyArmorConnector
+    2300008: Hand_Right
+    2300010: Hand_Right1
+    2300012: Head1
+    2300014: Helmet_Forehead
+    2300016: Helmet_Inner
+    2300018: Helmet_Left
+    2300020: Helmet_Right
+    2300022: Leg_Right
+    2300024: Leg_Right1
+    2300026: pasted__pCube4
+    2300028: pasted__pCube4 1
+    2300030: pCube1
+    2300032: pCube1 1
+    2300034: pCube10
+    2300036: pCube10 1
+    2300038: pCube11
+    2300040: pCube11 1
+    2300042: pCube12
+    2300044: pCube12 1
+    2300046: pCube13
+    2300048: pCube14
+    2300050: pCube15
+    2300052: pCube16
+    2300054: pCube17
+    2300056: pCube18
+    2300058: pCube19
+    2300060: pCube2
+    2300062: pCube2 1
+    2300064: pCube20
+    2300066: pCube21
+    2300068: pCube22
+    2300070: pCube23
+    2300072: pCube25
+    2300074: pCube26
+    2300076: pCube4
+    2300078: pCube5
+    2300080: pCube6
+    2300082: pCube8
+    2300084: pCube8 1
+    2300086: pCylinder1
+    2300088: pCylinder3
+    2300090: polySurface10
+    2300092: polySurface11
+    2300094: polySurface12
+    2300096: polySurface13
+    2300098: polySurface15
+    2300100: polySurface2
+    2300102: polySurface3
+    2300104: polySurface8
+    2300106: polySurface8 1
+    2300108: Shoulder_Right
+    2300110: Shoulder_Right1
+    3300000: Arm_Right
+    3300002: Arm_Right1
+    3300004: Body1
+    3300006: BodyArmorConnector
+    3300008: Hand_Right
+    3300010: Hand_Right1
+    3300012: Head1
+    3300014: Helmet_Forehead
+    3300016: Helmet_Inner
+    3300018: Helmet_Left
+    3300020: Helmet_Right
+    3300022: Leg_Right
+    3300024: Leg_Right1
+    3300026: pasted__pCube4
+    3300028: pasted__pCube4 1
+    3300030: pCube1
+    3300032: pCube1 1
+    3300034: pCube10
+    3300036: pCube10 1
+    3300038: pCube11
+    3300040: pCube11 1
+    3300042: pCube12
+    3300044: pCube12 1
+    3300046: pCube13
+    3300048: pCube14
+    3300050: pCube15
+    3300052: pCube16
+    3300054: pCube17
+    3300056: pCube18
+    3300058: pCube19
+    3300060: pCube2
+    3300062: pCube2 1
+    3300064: pCube20
+    3300066: pCube21
+    3300068: pCube22
+    3300070: pCube23
+    3300072: pCube25
+    3300074: pCube26
+    3300076: pCube4
+    3300078: pCube5
+    3300080: pCube6
+    3300082: pCube8
+    3300084: pCube8 1
+    3300086: pCylinder1
+    3300088: pCylinder3
+    3300090: polySurface10
+    3300092: polySurface11
+    3300094: polySurface12
+    3300096: polySurface13
+    3300098: polySurface15
+    3300100: polySurface2
+    3300102: polySurface3
+    3300104: polySurface8
+    3300106: polySurface8 1
+    3300108: Shoulder_Right
+    3300110: Shoulder_Right1
+    4300000: Helmet_Inner
+    4300002: Helmet_Right
+    4300004: pasted__pCube4
+    4300006: pCube1
+    4300008: pCube2
+    4300010: Helmet_Left
+    4300012: pasted__pCube4
+    4300014: pCube1
+    4300016: pCube2
+    4300018: Helmet_Forehead
+    4300020: Head1
+    4300022: pCylinder1
+    4300024: pCube13
+    4300026: pCube14
+    4300028: pCube15
+    4300030: pCube16
+    4300032: pCylinder3
+    4300034: pCube21
+    4300036: pCube20
+    4300038: pCube22
+    4300040: pCube19
+    4300042: pCube17
+    4300044: pCube18
+    4300046: pCube23
+    4300048: polySurface2
+    4300050: BodyArmorConnector
+    4300052: polySurface3
+    4300054: Shoulder_Right
+    4300056: Body1
+    4300058: Leg_Right
+    4300060: pCube4
+    4300062: polySurface10
+    4300064: polySurface11
+    4300066: polySurface12
+    4300068: Leg_Right1
+    4300070: pCube5
+    4300072: polySurface13
+    4300074: pCube6
+    4300076: Arm_Right
+    4300078: pCube8
+    4300080: Hand_Right
+    4300082: pCube11
+    4300084: pCube10
+    4300086: pCube12
+    4300088: polySurface15
+    4300090: pCube25
+    4300092: polySurface8
+    4300094: pCube26
+    4300096: polySurface8
+    4300098: Shoulder_Right1
+    4300100: Arm_Right1
+    4300102: pCube8
+    4300104: Hand_Right1
+    4300106: pCube11
+    4300108: pCube10
+    4300110: pCube12
+    7400000: Idle
+    7400002: Forward
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 118
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm_Right
+        weight: 1
+      - path: Arm_Right/Hand_Right
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube10
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube11
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube12
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube25
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube25/polySurface8
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube26
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube26/polySurface8 1
+        weight: 1
+      - path: Arm_Right/pCube8
+        weight: 1
+      - path: Arm_Right1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube10 1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube11 1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube12 1
+        weight: 1
+      - path: Arm_Right1/pCube8 1
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body1/Leg_Right
+        weight: 1
+      - path: Body1/Leg_Right/pCube4
+        weight: 1
+      - path: Body1/Leg_Right1
+        weight: 1
+      - path: Body1/Leg_Right1/pCube5
+        weight: 1
+      - path: Body1/pCube6
+        weight: 1
+      - path: Body1/polySurface10
+        weight: 1
+      - path: Body1/polySurface11
+        weight: 1
+      - path: Body1/polySurface12
+        weight: 1
+      - path: Body1/polySurface13
+        weight: 1
+      - path: BodyArmor
+        weight: 1
+      - path: BodyArmor/polySurface1
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2/polySurface3
+        weight: 1
+      - path: Helmet_Inner
+        weight: 1
+      - path: Helmet_Inner/Head1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pasted__pCube4
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pCube1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pCube2
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pasted__pCube4 1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pCube1 1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pCube2 1
+        weight: 1
+      - path: Helmet_Inner/pCylinder1
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: Shoulder_Right
+        weight: 1
+      - path: Shoulder_Right1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Forward
+      takeName: Take 001
+      firstFrame: 126
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arm_Right
+        weight: 1
+      - path: Arm_Right/Hand_Right
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube10
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube11
+        weight: 1
+      - path: Arm_Right/Hand_Right/pCube12
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube25
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube25/polySurface8
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube26
+        weight: 1
+      - path: Arm_Right/Hand_Right/polySurface15/pCube26/polySurface8 1
+        weight: 1
+      - path: Arm_Right/pCube8
+        weight: 1
+      - path: Arm_Right1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube10 1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube11 1
+        weight: 1
+      - path: Arm_Right1/Hand_Right1/pCube12 1
+        weight: 1
+      - path: Arm_Right1/pCube8 1
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Body1/Leg_Right
+        weight: 1
+      - path: Body1/Leg_Right/pCube4
+        weight: 1
+      - path: Body1/Leg_Right1
+        weight: 1
+      - path: Body1/Leg_Right1/pCube5
+        weight: 1
+      - path: Body1/pCube6
+        weight: 1
+      - path: Body1/polySurface10
+        weight: 1
+      - path: Body1/polySurface11
+        weight: 1
+      - path: Body1/polySurface12
+        weight: 1
+      - path: Body1/polySurface13
+        weight: 1
+      - path: BodyArmor
+        weight: 1
+      - path: BodyArmor/polySurface1
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: BodyArmor/polySurface1/polySurface2/polySurface3
+        weight: 1
+      - path: Helmet_Inner
+        weight: 1
+      - path: Helmet_Inner/Head1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pasted__pCube4
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pCube1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Left/pCube2
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pasted__pCube4 1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pCube1 1
+        weight: 1
+      - path: Helmet_Inner/Helmet_Right/pCube2 1
+        weight: 1
+      - path: Helmet_Inner/pCylinder1
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: Helmet_Inner/pCylinder1/pCube13/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: Shoulder_Right
+        weight: 1
+      - path: Shoulder_Right1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

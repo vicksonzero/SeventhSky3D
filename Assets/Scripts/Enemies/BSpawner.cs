@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class BSpawner : MonoBehaviour {
+
+    public Transform enemy;
+    public int noofEnemy = 20;
+    public float roomRadius = 12000;
+    public BEnemyCounter enemyCounter;
+
+	// Use this for initialization
+	void Start () {
+        for (int i = this.noofEnemy; i-->0; )
+        {
+            Vector3 spawnPos = Random.onUnitSphere * roomRadius;
+            Transform go = Instantiate(enemy, spawnPos, Quaternion.identity) as Transform;
+            go.SetParent(this.transform);
+            go.GetComponent<BEnemy>().enemyCounter = this.enemyCounter;
+            this.enemyCounter.login();
+        }
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
