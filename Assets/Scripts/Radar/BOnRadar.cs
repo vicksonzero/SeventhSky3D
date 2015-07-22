@@ -38,6 +38,7 @@ public class BOnRadar : MonoBehaviour {
         this.IconRadarGO = Instantiate(this.IconRadar, this.radar3d.position, Quaternion.identity) as Transform;
         this.IconRadarGO.SetParent(this.radar3d);
         this.IconRadarGO.localScale = new Vector3(1, 1, 1);
+        this.IconRadarGO.GetComponent<BRadarDot>().radarParent = this.radar3d;
 	}
 	
 	// Update is called once per frame
@@ -89,7 +90,8 @@ public class BOnRadar : MonoBehaviour {
     private void drawRadarMarker(Vector3 relativePos)
     {
         this.IconRadarGO.gameObject.SetActive(true);
-        this.IconRadarGO.localPosition = relativePos * this.radarSize / 2 / this.iconDistance;
+        this.IconRadarGO.position = this.radar3d.transform.position + relativePos * this.radarSize / 2 / this.iconDistance;
+        this.IconRadarGO.GetComponent<BRadarDot>().UpdateLineRenderer();
     }
     private void drawOutOfSightMarker(Vector3 relativePos)
     {
