@@ -4,6 +4,7 @@ using System.Collections;
 public class BCanvasButtons : MonoBehaviour {
 
     private bool forwardIsDown = false;
+    private bool brakeIsDown = false;
     private float forwardDblClickTimer = 0;
 
     private bool[] shootIsDown = new bool[4];
@@ -21,6 +22,11 @@ public class BCanvasButtons : MonoBehaviour {
 	    if (this.forwardIsDown)
         {
             this.HForwardStep();
+        }
+
+        if (this.brakeIsDown)
+        {
+            this.HBrakeStep();
         }
 
         for (int i = this.shootIsDown.Length; i-- > 0; )
@@ -43,6 +49,20 @@ public class BCanvasButtons : MonoBehaviour {
     public void HForwardUp()
     {
         this.forwardIsDown = false;
+    }
+
+    public void HBrakeDown()
+    {
+        this.brakeIsDown = true;
+
+    }
+    public void HBrakeStep()
+    {
+        player.accelerate();
+    }
+    public void HBrakeUp()
+    {
+        this.brakeIsDown = false;
     }
 
     public void HShootDown(int index)
