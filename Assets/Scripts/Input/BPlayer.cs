@@ -5,8 +5,11 @@ using UnityEngine.UI;
 public class BPlayer : MonoBehaviour {
 
 
-    public float topSpeed = 50000;
-	public float forwardforce = 2000;
+    public float topSpeed = 600;
+	public float forwardforce = 300;
+    public float brakedrag = 1.7f;
+    //public float brakeBotSpeed = 20;
+    private float normaldrag = 0.3f;
     public Transform model;
 
     public enum PacifixAnimState { Idle, Forward };
@@ -53,6 +56,19 @@ public class BPlayer : MonoBehaviour {
         this.rigidbody.velocity = Vector3.forward * forwardforce;
         this.setAnimation(PacifixAnimState.Forward);
 
+    }
+    public void startDecelerate()
+    {
+        //Debug.Log(this.rigidbody.velocity.magnitude);
+        //this.rigidbody.AddRelativeForce(this.rigidbody.velocity.normalized * -1 * this.brakeforce);
+        this.normaldrag = this.rigidbody.drag;
+        this.rigidbody.drag = this.brakedrag;
+        this.setAnimation(PacifixAnimState.Idle);
+
+    }
+    public void stopDecelerate()
+    {
+        this.rigidbody.drag = this.normaldrag;
     }
     public bool weaponTryShoot(int index)
     {

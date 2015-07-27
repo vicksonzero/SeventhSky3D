@@ -54,15 +54,16 @@ public class BCanvasButtons : MonoBehaviour {
     public void HBrakeDown()
     {
         this.brakeIsDown = true;
-
+        this.player.startDecelerate();
     }
     public void HBrakeStep()
     {
-        player.accelerate();
+        // nothing
     }
     public void HBrakeUp()
     {
         this.brakeIsDown = false;
+        this.player.stopDecelerate();
     }
 
     public void HShootDown(int index)
