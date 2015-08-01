@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class BPlayer : MonoBehaviour {
 
+    public float hpMax = 100;
+    public float hp = 100;
+    public bool isInvincible = false;
 
     public float topSpeed = 600;
 	public float forwardforce = 300;

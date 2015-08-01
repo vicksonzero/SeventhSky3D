@@ -23,9 +23,9 @@ public class BWeaponLineMachineGun : BWeapons {
     }
     public override void doShoot()
     {
-        print("line machine gun doshoot");
+        //print("line machine gun doshoot");
         //print(this.crosshair.rectTransform.rect.width);
-        print(this.crosshairCanvas.localScale);
+        //print(this.crosshairCanvas.localScale);
         Vector2 shootPoint = Random.insideUnitCircle * this.crosshair.rectTransform.rect.width/2;//s(pixelWidth, pixelHeight).
         
         float xx = Screen.width / 2;

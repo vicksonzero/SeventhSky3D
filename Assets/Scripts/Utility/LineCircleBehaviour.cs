@@ -24,7 +24,7 @@ public class LineCircleBehaviour : MonoBehaviour {
 	}
     public void Rebuild()
     {
-        Debug.Log("circle rebuild");
+        //Debug.Log("circle rebuild");
         // update style
         LineRenderer lineRenderer = this.gameObject.GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = false;

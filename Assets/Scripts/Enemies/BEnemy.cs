@@ -8,6 +8,7 @@ public class BEnemy : MonoBehaviour {
     public float maxhp = 100;
     public Transform firework;
     public BEnemyCounter enemyCounter;
+    public BEnemyKillCounter enemyKillCounter;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,7 @@ public class BEnemy : MonoBehaviour {
         this.GetComponent<BOnRadar>().destroyMarker();
         Instantiate(this.firework, this.transform.position, Quaternion.identity);
         this.enemyCounter.logout();
+        this.enemyKillCounter.add();
 
         Destroy(this.gameObject);
     }
