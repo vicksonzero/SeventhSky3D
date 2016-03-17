@@ -30,6 +30,7 @@ public class BLineBullet : MonoBehaviour {
 
     public void Shoot(Vector3 dest)
     {
+        this.Hide();
         this.line.SetPosition(0, this.bulletSpawnVector.position);
         this.line.SetPosition(1,dest);
         this.line.enabled = true;

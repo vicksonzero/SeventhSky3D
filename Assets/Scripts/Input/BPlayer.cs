@@ -1,36 +1,41 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class BPlayer : MonoBehaviour {
 
+    [Header("Data")]
     public float hpMax = 100;
-    public float hp = 100;
-    public bool isInvincible = false;
 
     public float topSpeed = 600;
 	public float forwardforce = 300;
-    public float dashInterval = 0.5f;
     public float brakedrag = 1.3f;
     //public float brakeBotSpeed = 20;
+    public float turnSpeed = 10;
     private float normaldrag = 0.3f;
+
+    [Header("Linking")]
+    public Text speedLabel;
+    public Button[] weaponButtons = new Button[3];
     public Transform model;
+
+    [Header("State")]
+    public float hp = 100;
+    public bool isInvincible = false;
+
+    public Quaternion targetRotation;
 
     public enum PacifixAnimState { Idle, Forward };
     private PacifixAnimState animState = PacifixAnimState.Idle;
 
-    public enum ControlParty{GameMaster, Self, Skill, None};
+    public enum ControlParty { GameMaster, Self, Skill, None };
     [Tooltip("Indicates who has control over this player")]
     public ControlParty isControlledBy = ControlParty.Self;
 
-    [Tooltip("Will be filled in at runtime")]
+    [Tooltip("Attach weapon by putting components. This array will be filled in at runtime")]
     public BWeapons[] weapons = new BWeapons[4];
 
-    public Text speedLabel;
-    public Button[] weaponButtons = new Button[3];
-
-    public float dashCountdown = 0;
-    public float dashCount = 0;
     // Use this for initialization
     void Start () {
         
@@ -46,49 +51,18 @@ public class BPlayer : MonoBehaviour {
         }
         this.speedLabel.text = string.Format("Speed: {0:F1}\n{1:S10}", this.GetComponent<Rigidbody>().velocity.magnitude, speedMeter);
         //this.speedLabel.text = string.Format("Speed: {0:F1}", this.GetComponent<Rigidbody>().velocity.magnitude);
-        if ( Input.GetButton("Acceleration") )
-        {
-            this.accelerate();
-            
-        }
-        if (Input.GetButtonDown("Acceleration"))
-        {
-            if (this.dashCountdown > 0 && this.dashCount == 1)
-            {
-                this.dash();
-            }
-            else if (this.dashCountdown <= 0)
-            {
-                this.dashCountdown = this.dashInterval;
-                this.dashCount = 1;
-            }
-        }
-        Debug.Log(this.dashCountdown);
-        if (this.dashCountdown > 0)
-        {
-            this.dashCountdown -= 1 * Time.deltaTime;
-        }
-        else
-        {
-            this.dashCount = 0;
-        }
-        if (Input.GetButtonDown("Brake"))
-        {
-            this.startDecelerate();
-        }
-        if (Input.GetButtonUp("Brake"))
-        {
-            this.stopDecelerate();
-        }
-#if UNITY_EDITOR
-        if (Input.GetAxis("Fire1")>0)
-        {
-            this.weapons[1].tryShoot();
-        }
-#endif
 
+        this.updateRotation();
         this.updateAnimation();
 	}
+
+    private void updateRotation()
+    {
+        if(this.transform.rotation != this.targetRotation)
+        {
+            this.transform.rotation = Quaternion.Slerp(this.transform.rotation, this.targetRotation, Time.deltaTime * this.turnSpeed);
+        }
+    }
 
     public void accelerate()
     {
@@ -121,6 +95,7 @@ public class BPlayer : MonoBehaviour {
     {
         this.GetComponent<Rigidbody>().drag = this.normaldrag;
     }
+
     public bool weaponTryShoot(int index)
     {
         return this.weapons[index].tryShoot();

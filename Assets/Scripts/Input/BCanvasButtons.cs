@@ -10,7 +10,7 @@ public class BCanvasButtons : MonoBehaviour {
     private bool[] shootIsDown = new bool[4];
 
 
-    public BPlayer player;
+    public BMainInput mainInput;
 
     public float dashCountdown = 0;
     public int dashCount = 0;
@@ -57,7 +57,7 @@ public class BCanvasButtons : MonoBehaviour {
 
         if (this.dashCountdown > 0 && this.dashCount == 1)
         {
-            this.player.dash();
+            this.mainInput.dash();
         }
         else if (this.dashCountdown <= 0)
         {
@@ -67,7 +67,7 @@ public class BCanvasButtons : MonoBehaviour {
     }
     public void HForwardStep()
     {
-        player.accelerate();
+        mainInput.accelerate();
     }
     public void HForwardUp()
     {
@@ -77,7 +77,7 @@ public class BCanvasButtons : MonoBehaviour {
     public void HBrakeDown()
     {
         this.brakeIsDown = true;
-        this.player.startDecelerate();
+        this.mainInput.startDecelerate();
     }
     public void HBrakeStep()
     {
@@ -86,7 +86,7 @@ public class BCanvasButtons : MonoBehaviour {
     public void HBrakeUp()
     {
         this.brakeIsDown = false;
-        this.player.stopDecelerate();
+        this.mainInput.stopDecelerate();
     }
 
     public void HShootDown(int index)
@@ -96,7 +96,7 @@ public class BCanvasButtons : MonoBehaviour {
     }
     public void HShootStep(int index)
     {
-        player.weaponTryShoot(1);
+        mainInput.weaponTryShoot(1);
     }
     public void HShootUp(int index)
     {
