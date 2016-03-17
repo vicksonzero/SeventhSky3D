@@ -19,7 +19,10 @@ public class BWeaponLineMachineGun : BWeapons {
     {
         base.Start();
         print("weapon line machine gun start");
-        
+        if (! this.bullet.bulletSpawnVector)
+        {
+            this.bullet.bulletSpawnVector = this.bulletSpawnVector;
+        }
     }
     public override void doShoot()
     {

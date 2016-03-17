@@ -14,7 +14,7 @@ public class BWeaponProjectile : BWeapons
     {
         Rigidbody bull = Instantiate(this.bullet, this.bulletSpawnVector.position, this.bulletSpawnVector.rotation) as Rigidbody;
         BPlayer player = this.GetComponent<BPlayer>();
-        bull.velocity = this.bulletSpawnVector.forward * (this.rigidbody.velocity.magnitude + this.bulletSpeed);
+        bull.velocity = this.bulletSpawnVector.forward * (this.GetComponent<Rigidbody>().velocity.magnitude + this.bulletSpeed);
     }
 
 }

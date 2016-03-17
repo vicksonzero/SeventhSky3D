@@ -3,31 +3,54 @@ using System.Collections;
 
 public class lockCursorBehaviour : MonoBehaviour
 {
-#region [private variables]
-#endregion
+    public CursorLockMode wantedMode;
 
-#region [Unity Events]
-    // Use this for initialization
-    void Start () {
-        Debug.Log("lockCursorBehaviour loaded");
-        Screen.lockCursor = true;
-        Debug.Log("cursor is now " + (Screen.lockCursor ? "Locked" : "Free"));
-	}
-    void Update()
+    // Apply requested cursor state
+    void SetCursorState()
     {
-        if (Input.GetKeyDown("p"))
-        {
-            Screen.lockCursor = !Screen.lockCursor;
-            Debug.Log("cursor is now " + (Screen.lockCursor ? "Locked" : "Free"));
-        }
-        if (Input.GetKeyDown("escape"))
-        {
-            Debug.Log("click screen and press P to lock cursor again");
-        }
+        Cursor.lockState = wantedMode;
+        // Hide cursor when locking
+        Cursor.visible = (CursorLockMode.Locked != wantedMode);
     }
-#endregion
 
-#region [private method]
-#endregion
-    
+    void OnGUI()
+    {
+        GUILayout.BeginVertical();
+        // Release cursor on escape keypress
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            Cursor.lockState = wantedMode = CursorLockMode.None;
+
+        switch (Cursor.lockState)
+        {
+            case CursorLockMode.None:
+                GUILayout.Label("Cursor is normal");
+                if (GUILayout.Button("Lock cursor"))
+                    wantedMode = CursorLockMode.Locked;
+                if (GUILayout.Button("Confine cursor"))
+                    wantedMode = CursorLockMode.Confined;
+                break;
+            case CursorLockMode.Confined:
+                GUILayout.Label("Cursor is confined");
+                if (GUILayout.Button("Lock cursor"))
+                    wantedMode = CursorLockMode.Locked;
+                if (GUILayout.Button("Release cursor"))
+                    wantedMode = CursorLockMode.None;
+                break;
+            case CursorLockMode.Locked:
+                GUILayout.Label("Cursor is locked");
+                if (GUILayout.Button("Unlock cursor"))
+                    wantedMode = CursorLockMode.None;
+                if (GUILayout.Button("Confine cursor"))
+                    wantedMode = CursorLockMode.Confined;
+                break;
+        }
+
+        GUILayout.EndVertical();
+
+        SetCursorState();
+    }
+    public void ReleaseCursor()
+    {
+        Cursor.lockState = wantedMode = CursorLockMode.None;
+    }
 }

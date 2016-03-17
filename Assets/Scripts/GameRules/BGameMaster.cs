@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class BGameMaster : MonoBehaviour {
@@ -7,11 +8,15 @@ public class BGameMaster : MonoBehaviour {
     public BMissionAccomplished missionAccomplishedManager;
     public BTimer gameTimeTimer;
 
-	// Use this for initialization
-	void Start () {
+    public string sceneName;
+
+    public lockCursorBehaviour lockCursorBehaviour;
+
+    // Use this for initialization
+    void Start () {
         BTimer[] timers = this.GetComponents<BTimer>();
         foreach(BTimer timer in timers){
-            if (timer.name == "gameTime")
+            if (timer.timerID == "gameTime")
             {
                 this.gameTimeTimer = timer;
                 timer.startTimer();
@@ -26,7 +31,7 @@ public class BGameMaster : MonoBehaviour {
 
     public void gameOver(bool isWin)
     {
-        print("Game over: " + isWin);
+        print("Game over: " + (isWin?"WIN":"LOSE"));
         if (isWin)
         {
             // protect player
@@ -36,10 +41,19 @@ public class BGameMaster : MonoBehaviour {
             this.player.isControlledBy = BPlayer.ControlParty.GameMaster;
 
             // start end game animation
+            this.missionAccomplishedManager.sequenceEndCallbacks += onMissionAccomplishedSequanceFinished;
             this.missionAccomplishedManager.startSequence();
             this.gameTimeTimer.updateLabels();
 
             //Application.Quit();
         }
+    }
+
+    public void onMissionAccomplishedSequanceFinished()
+    {
+
+        //Application.LoadLevel(sceneName);
+        if (lockCursorBehaviour!=null) lockCursorBehaviour.ReleaseCursor();
+        SceneManager.LoadScene(sceneName);
     }
 }

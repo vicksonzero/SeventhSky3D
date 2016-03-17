@@ -10,14 +10,12 @@ public class AutoDieBehaviour : MonoBehaviour
 	void Start () {
         // compute when to die
         this.birthday = Time.time + this.timeToLive;
+        StartCoroutine("autoDieTrigger");
 	}
 	
-	// Update is called once per frame
-	void Update () {
-        // so sad to die on your birthday
-        if (Time.time >= this.birthday)
-        {
-            Destroy(this.gameObject);
-        }
-	}
+    IEnumerator autoDieTrigger()
+    {
+        yield return new WaitForSeconds(this.timeToLive);
+        Destroy(this.gameObject);
+    }
 }

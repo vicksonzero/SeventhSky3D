@@ -3,7 +3,7 @@ using System.Collections;
 
 public class rotateWMouseBehaviour : MonoBehaviour {
 
-    public float rotSpeed = 3;
+    public float rotSpeed = 116;
 
     private Quaternion originalRotation;
 
@@ -17,7 +17,7 @@ public class rotateWMouseBehaviour : MonoBehaviour {
         if (!Input.gyro.enabled && !Input.compass.enabled)
         {
             this.transform.Rotate(0, Input.GetAxis("Mouse X") * Time.deltaTime * this.rotSpeed, 0, Space.World);
-            this.transform.Rotate(Input.GetAxis("Mouse Y") * Time.deltaTime * this.rotSpeed, 0, 0,Space.Self);
+            this.transform.Rotate(-1 * Input.GetAxis("Mouse Y") * Time.deltaTime * this.rotSpeed, 0, 0,Space.Self);
         }
 	}
 }

@@ -12,8 +12,13 @@ public class BCanvasButtons : MonoBehaviour {
 
     public BPlayer player;
 
-	// Use this for initialization
-	void Start () {
+    public float dashCountdown = 0;
+    public int dashCount = 0;
+
+    public float dashInterval = 0.5f;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -36,11 +41,29 @@ public class BCanvasButtons : MonoBehaviour {
                 this.HShootStep(i);
             }
         }
-	}
+
+        if (this.dashCountdown > 0)
+        {
+            this.dashCountdown -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            this.dashCount = 0;
+        }
+    }
     public void HForwardDown()
     {
         this.forwardIsDown = true;
 
+        if (this.dashCountdown > 0 && this.dashCount == 1)
+        {
+            this.player.dash();
+        }
+        else if (this.dashCountdown <= 0)
+        {
+            this.dashCountdown = this.dashInterval;
+            this.dashCount = 1;
+        }
     }
     public void HForwardStep()
     {

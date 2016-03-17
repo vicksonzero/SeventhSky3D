@@ -95,8 +95,8 @@ public class chunkBehaviour : MonoBehaviour {
         if (this.chunkID == 14) { /* do nothing for now */}
         if (!this.debugBoundary)
         {
-            chunkTrigger.renderer.enabled = false;
-            chunkBoundary.renderer.enabled = false;
+            chunkTrigger.GetComponent<Renderer>().enabled = false;
+            chunkBoundary.GetComponent<Renderer>().enabled = false;
         }
 	}
 	

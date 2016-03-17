@@ -9,6 +9,7 @@ public class BEnemy : MonoBehaviour {
     public Transform firework;
     public BEnemyCounter enemyCounter;
     public BEnemyKillCounter enemyKillCounter;
+    public BOnRadar hpBarListener;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +29,12 @@ public class BEnemy : MonoBehaviour {
         {
             this.die();
         }
+        this.onHPChanged();
+    }
 
+    private void onHPChanged()
+    {
+        this.hpBarListener.updateHPBar(this.hp, this.maxhp);
     }
 
     public float getHPPercent()

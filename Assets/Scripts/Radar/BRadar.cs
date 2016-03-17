@@ -25,6 +25,6 @@ public class BRadar : MonoBehaviour {
         go.radarCamera = this.radarCamera;
         go.radarCanvas = this.radarCanvas;
         go.radar3d = this.radar3d;
-        go.radarSize = this.radarSize;
+        go.radar3DSize = this.radarSize;
     }
 }

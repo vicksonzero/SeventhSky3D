@@ -13,10 +13,12 @@ public class BMissionAccomplished : MonoBehaviour {
 
     public bool sequenceStarted = false;
     public float timeToRestart = 6;
-    public string sceneName;
 
-	// Use this for initialization
-	void Start () {
+    public delegate void SequenceEndCallback();
+    public SequenceEndCallback sequenceEndCallbacks;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -28,7 +30,10 @@ public class BMissionAccomplished : MonoBehaviour {
             timeToRestart -= Time.deltaTime;
             if (timeToRestart < 0)
             {
-                Application.LoadLevel(this.sceneName);
+                if (sequenceEndCallbacks != null)
+                {
+                    sequenceEndCallbacks();
+                }
             }
         }
 	}

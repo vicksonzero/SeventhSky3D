@@ -13,7 +13,7 @@ public class BSpawner : MonoBehaviour {
 	void Start () {
         for (int i = this.noofEnemy; i-->0; )
         {
-            Vector3 spawnPos = this.transform.position + Random.onUnitSphere * roomRadius;
+            Vector3 spawnPos = this.transform.position + Random.insideUnitSphere * roomRadius;
             Transform go = Instantiate(enemy, spawnPos, Quaternion.identity) as Transform;
             go.SetParent(this.transform);
             go.GetComponent<BEnemy>().enemyCounter = this.enemyCounter;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BTimer : MonoBehaviour {
 
-    public string name = "Timer";
+    public string timerID = "Timer";
     public float startTime = 0;
 
     public Text[] counterLabels;

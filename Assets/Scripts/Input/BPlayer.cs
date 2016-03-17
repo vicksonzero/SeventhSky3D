@@ -10,7 +10,8 @@ public class BPlayer : MonoBehaviour {
 
     public float topSpeed = 600;
 	public float forwardforce = 300;
-    public float brakedrag = 1.7f;
+    public float dashInterval = 0.5f;
+    public float brakedrag = 1.3f;
     //public float brakeBotSpeed = 20;
     private float normaldrag = 0.3f;
     public Transform model;
@@ -27,28 +28,75 @@ public class BPlayer : MonoBehaviour {
 
     public Text speedLabel;
     public Button[] weaponButtons = new Button[3];
-	// Use this for initialization
-	void Start () {
+
+    public float dashCountdown = 0;
+    public float dashCount = 0;
+    // Use this for initialization
+    void Start () {
         
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        this.speedLabel.text = "Speed: " + this.rigidbody.velocity.magnitude.ToString();
-        if ( Input.GetKey("space") )
+        string speedMeter = "";
+        int speedLevel = (int)(this.GetComponent<Rigidbody>().velocity.magnitude/(400.0/8.0));
+        for(int i=0; i < speedLevel; i++)
+        {
+            speedMeter += "=";
+        }
+        this.speedLabel.text = string.Format("Speed: {0:F1}\n{1:S10}", this.GetComponent<Rigidbody>().velocity.magnitude, speedMeter);
+        //this.speedLabel.text = string.Format("Speed: {0:F1}", this.GetComponent<Rigidbody>().velocity.magnitude);
+        if ( Input.GetButton("Acceleration") )
         {
             this.accelerate();
+            
         }
+        if (Input.GetButtonDown("Acceleration"))
+        {
+            if (this.dashCountdown > 0 && this.dashCount == 1)
+            {
+                this.dash();
+            }
+            else if (this.dashCountdown <= 0)
+            {
+                this.dashCountdown = this.dashInterval;
+                this.dashCount = 1;
+            }
+        }
+        Debug.Log(this.dashCountdown);
+        if (this.dashCountdown > 0)
+        {
+            this.dashCountdown -= 1 * Time.deltaTime;
+        }
+        else
+        {
+            this.dashCount = 0;
+        }
+        if (Input.GetButtonDown("Brake"))
+        {
+            this.startDecelerate();
+        }
+        if (Input.GetButtonUp("Brake"))
+        {
+            this.stopDecelerate();
+        }
+#if UNITY_EDITOR
+        if (Input.GetAxis("Fire1")>0)
+        {
+            this.weapons[1].tryShoot();
+        }
+#endif
+
         this.updateAnimation();
 	}
 
     public void accelerate()
     {
         //Debug.Log(this.rigidbody.velocity.magnitude);
-        this.rigidbody.AddRelativeForce(Vector3.forward * forwardforce);
-        if (this.rigidbody.velocity.magnitude > this.topSpeed)
+        this.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * forwardforce);
+        if (this.GetComponent<Rigidbody>().velocity.magnitude > this.topSpeed)
         {
-            this.rigidbody.velocity *= this.topSpeed / this.rigidbody.velocity.magnitude;
+            this.GetComponent<Rigidbody>().velocity *= this.topSpeed / this.GetComponent<Rigidbody>().velocity.magnitude;
         }
         this.setAnimation(PacifixAnimState.Forward);
             
@@ -56,7 +104,7 @@ public class BPlayer : MonoBehaviour {
     public void dash()
     {
         //Debug.Log(this.rigidbody.velocity.magnitude);
-        this.rigidbody.velocity = Vector3.forward * forwardforce;
+        this.GetComponent<Rigidbody>().velocity = this.transform.forward * this.topSpeed;
         this.setAnimation(PacifixAnimState.Forward);
 
     }
@@ -64,14 +112,14 @@ public class BPlayer : MonoBehaviour {
     {
         //Debug.Log(this.rigidbody.velocity.magnitude);
         //this.rigidbody.AddRelativeForce(this.rigidbody.velocity.normalized * -1 * this.brakeforce);
-        this.normaldrag = this.rigidbody.drag;
-        this.rigidbody.drag = this.brakedrag;
+        this.normaldrag = this.GetComponent<Rigidbody>().drag;
+        this.GetComponent<Rigidbody>().drag = this.brakedrag;
         this.setAnimation(PacifixAnimState.Idle);
 
     }
     public void stopDecelerate()
     {
-        this.rigidbody.drag = this.normaldrag;
+        this.GetComponent<Rigidbody>().drag = this.normaldrag;
     }
     public bool weaponTryShoot(int index)
     {
@@ -102,7 +150,7 @@ public class BPlayer : MonoBehaviour {
 
                 break;
         }
-        this.model.animation.CrossFade(nextFrameName, 0.3f, PlayMode.StopSameLayer);
+        this.model.GetComponent<Animation>().CrossFade(nextFrameName, 0.3f, PlayMode.StopSameLayer);
 
         // invalidate animstate
         this.animState = PacifixAnimState.Idle;
