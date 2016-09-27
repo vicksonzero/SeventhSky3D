@@ -56,6 +56,7 @@ public class BOnRadar : MonoBehaviour {
         this.IconRadarGO = Instantiate(this.IconRadar, this.radar3d.position, Quaternion.identity) as Transform;
         this.IconRadarGO.SetParent(this.radar3d);
         this.IconRadarGO.localScale = new Vector3(1, 1, 1);
+        this.IconRadarGO.localRotation = Quaternion.identity;
         this.IconRadarGO.GetComponent<BRadarDot>().radarParent = this.radar3d;
 
         this.hpBarGO = Instantiate(this.hpBar, Vector2.Scale(this.hpBarOffset, new Vector2(1, 1)), Quaternion.identity) as RectTransform;
@@ -179,6 +180,7 @@ public class BOnRadar : MonoBehaviour {
         Destroy(this.IconGO.gameObject);
         Destroy(this.IconCloseGO.gameObject);
         Destroy(this.IconOutsideViewGO.gameObject);
+        Destroy(this.IconOutOfSightGO.gameObject);
         Destroy(this.IconRadarGO.gameObject);
     }
     public bool inScreen(Vector3 screenPos)

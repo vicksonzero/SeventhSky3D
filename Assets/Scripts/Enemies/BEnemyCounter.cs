@@ -7,8 +7,11 @@ public class BEnemyCounter : MonoBehaviour {
     public Text counterLabel;
     public int count=0;
 
-	// Use this for initialization
-	void Start () {
+    public delegate void EnemyCountUpdated();
+    public event EnemyCountUpdated enemyCountUpdated;
+
+    // Use this for initialization
+    void Start () {
 	    
 	}
 	
@@ -32,5 +35,6 @@ public class BEnemyCounter : MonoBehaviour {
 
     public void onEnemyCountUpdated(){
         this.counterLabel.text = "Targets left: " + this.count.ToString();
+        this.enemyCountUpdated();
     }
 }

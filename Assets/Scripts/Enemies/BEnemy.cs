@@ -43,13 +43,20 @@ public class BEnemy : MonoBehaviour {
     {
         return this.hp / this.maxhp;
     }
+
     public void die()
     {
-        this.GetComponent<BOnRadar>().destroyMarker();
         Instantiate(this.firework, this.transform.position, Quaternion.identity);
-        this.enemyCounter.logout();
         this.enemyKillCounter.add();
+        this.remove();
+    }
 
+    public void remove()
+    {
+        print("remove()");
+
+        this.GetComponent<BOnRadar>().destroyMarker();
+        this.enemyCounter.logout();
         Destroy(this.gameObject);
     }
 }
