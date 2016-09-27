@@ -40,8 +40,8 @@ public class GyroController : MonoBehaviour
 	{
         if (Input.gyro.enabled)
         {
-            //transform.rotation = Quaternion.Slerp(transform.rotation,cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix()), lowPassFilterFactor);
-            transform.rotation = cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix());
+            //transform.localRotation = Quaternion.Slerp(transform.localRotation,cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix()), lowPassFilterFactor);
+            transform.localRotation = cameraBase * (ConvertRotation(referanceRotation * Input.gyro.attitude) * GetRotFix());
         }
     }
 
@@ -90,7 +90,7 @@ public class GyroController : MonoBehaviour
 
 		if (GUILayout.Button("Reset camera rotation", GUILayout.Height(80)))
 		{
-			transform.rotation = Quaternion.identity;
+			transform.localRotation = Quaternion.identity;
 		}
 	}
 
@@ -169,7 +169,7 @@ public class GyroController : MonoBehaviour
 		}
 		else
 		{
-			cameraBase = transform.rotation;
+			cameraBase = transform.localRotation;
 		}
 	}
 	

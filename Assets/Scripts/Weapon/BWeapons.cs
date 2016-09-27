@@ -16,6 +16,8 @@ public abstract class BWeapons :MonoBehaviour {
 
     public float damage = 0;
 
+    public BPlayer player;
+
     public void Start()
     {
         print("weapon start");

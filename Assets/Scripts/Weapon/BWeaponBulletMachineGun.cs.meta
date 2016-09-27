@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6bc591fa916a9764b9619c5db230d42f
+timeCreated: 1474448951
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - icon: {instanceID: 0}
+  - player: {instanceID: 0}
+  - crosshair: {instanceID: 0}
+  - crosshairCanvas: {instanceID: 0}
+  - bulletSpawnVector: {instanceID: 0}
+  - bullet: {fileID: 11484076, guid: 122ccb8a23d84f446891a3b7bcda9c6e, type: 2}
+  - firework: {fileID: 400000, guid: cb8c1bbb7924e694bb599a9e0718e86a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

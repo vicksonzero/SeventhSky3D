@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class BWeaponLineMachineGun : BWeapons {
+public class BWeaponLineMachineGun : BWeapons
+{
 
 
     [Header("Specific")]
@@ -12,25 +13,25 @@ public class BWeaponLineMachineGun : BWeapons {
     [Tooltip("must be a child of the shooter. the bullet will be created and shot at the angle of this transform")]
     public Transform bulletSpawnVector;
 
-    public BLineBullet bullet;
+    public BTrailBullet bullet;
     public Transform firework;
 
-    public void Start()
+    public float bulletFade = 1;
+
+    public new void Start()
     {
         base.Start();
         print("weapon line machine gun start");
-        if (! this.bullet.bulletSpawnVector)
-        {
-            this.bullet.bulletSpawnVector = this.bulletSpawnVector;
-        }
+        this.player = this.GetComponent<BPlayer>();
     }
+
     public override void doShoot()
     {
         //print("line machine gun doshoot");
         //print(this.crosshair.rectTransform.rect.width);
         //print(this.crosshairCanvas.localScale);
-        Vector2 shootPoint = Random.insideUnitCircle * this.crosshair.rectTransform.rect.width/2;//s(pixelWidth, pixelHeight).
-        
+        Vector2 shootPoint = Random.insideUnitCircle * this.crosshair.rectTransform.rect.width / 2;//s(pixelWidth, pixelHeight).
+
         float xx = Screen.width / 2;
         float yy = Screen.height / 2;
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(xx + shootPoint.x, yy + shootPoint.y, 0));
@@ -48,7 +49,17 @@ public class BWeaponLineMachineGun : BWeapons {
             Instantiate(this.firework, hitpoint, Quaternion.identity);
         }
 
-        this.bullet.Shoot(hitpoint);
+        this.makeBullet(this.bulletSpawnVector.position, hitpoint);
+        this.player.setAnimation(BPlayer.PacifixAnimState.HeadVulcan);
+
+    }
+
+    private BTrailBullet makeBullet(Vector3 spawnPoint, Vector3 shootingPoint)
+    {
+        var bull = Instantiate(this.bullet, spawnPoint, Quaternion.LookRotation(shootingPoint - spawnPoint)) as BTrailBullet;
+        bull.setDuration(this.bulletFade);
+        bull.setFromTo(spawnPoint, shootingPoint);
+        return bull;
     }
 
 }

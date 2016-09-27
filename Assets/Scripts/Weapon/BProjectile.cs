@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class BProjectile : MonoBehaviour {
 
     public Transform firework;
+
+    public float damage = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -15,11 +18,48 @@ public class BProjectile : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Enemy")
+        print("some collision happened");
+        // if we have hit an enemy
+        if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Instantiate(this.firework, this.transform.position, Quaternion.identity);
+            Vector3 hitpoint = col.contacts[0].point;
+            col.gameObject.GetComponentInParent<BEnemy>().takeDamage(this.damage);
+            Instantiate(this.firework, hitpoint, Quaternion.identity);
+
+            Destroy(this.gameObject);
+        }
+
+        if (col.gameObject.layer == LayerMask.NameToLayer("Structures"))
+        {
+            Vector3 hitpoint = col.contacts[0].point;
+            Instantiate(this.firework, hitpoint, Quaternion.identity);
+            Destroy(this.gameObject);
+        }
+        if (col.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+
+            Vector3 hitpoint = col.contacts[0].point;
+
+            var shield = col.gameObject.GetComponent<BShield>();
+            if(shield != null)
+            {
+                print("hit shield");
+                Instantiate(this.firework, hitpoint, Quaternion.identity);
+
+                Destroy(this.gameObject);
+            }
+            else
+            {
+
+                print("hit player");
+                // Default
+
+                Instantiate(this.firework, hitpoint, Quaternion.identity);
+
+                Destroy(this.gameObject);
+            }
 
         }
     }

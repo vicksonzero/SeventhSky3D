@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class BEnemyKillCounter : BStatCounters
 {
+
     public enum enemyName { };
     [Header("BEnemyKillCounter")]
     public int count;

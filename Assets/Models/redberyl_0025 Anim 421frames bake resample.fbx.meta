@@ -1,0 +1,2631 @@
+fileFormatVersion: 2
+guid: 1bbc77fbb9c58c94ca8ae0379af89b02
+timeCreated: 1458897238
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_Right1
+    100002: Arm_Right2
+    100004: back0
+    100006: back1
+    100008: back2
+    100010: back3
+    100012: back4
+    100014: Body1
+    100016: Body_Control
+    100018: BodyArmorConnector
+    100020: chest
+    100022: Hand_Right1
+    100024: Hand_Right2
+    100026: head
+    100028: Head1
+    100030: Helmet_Forehead
+    100032: Helmet_Inner
+    100034: Helmet_L_Fin
+    100036: Helmet_Sides
+    100038: Hemlet_R_Fin
+    100040: joint16
+    100042: joint16 1
+    100044: joint17
+    100046: joint18
+    100048: joint19
+    100050: joint20
+    100052: joint22
+    100054: joint22 1
+    100056: l_elbow
+    100058: l_elbow 1
+    100060: l_face_flap
+    100062: l_finger
+    100064: l_finger 1
+    100066: l_hip
+    100068: l_knee
+    100070: l_shoulder
+    100072: l_shoulder1
+    100074: l_shoulder_armor0
+    100076: l_shoulder_armor1
+    100078: l_skirt0
+    100080: l_skirt0_fin1
+    100082: l_skirt1
+    100084: l_skirt1_fin0
+    100086: l_skirt1_fin1
+    100088: l_skirt2
+    100090: l_skirt2_fin0
+    100092: l_tip
+    100094: l_wrist
+    100096: l_wrist 1
+    100098: Leg_Left
+    100100: Leg_Right
+    100102: Leg_Tip_Left
+    100104: Leg_Tip_Right
+    100106: LowerBack_Control
+    100108: Main_Control
+    100110: neck0
+    100112: neck1
+    100114: pasted__pCube4
+    100116: pasted__pCube5
+    100118: pCube10
+    100120: pCube11
+    100122: pCube11 1
+    100124: pCube12
+    100126: pCube12 1
+    100128: pCube13
+    100130: pCube14
+    100132: pCube15
+    100134: pCube16
+    100136: pCube17
+    100138: pCube18
+    100140: pCube19
+    100142: pCube20
+    100144: pCube21
+    100146: pCube22
+    100148: pCube23
+    100150: pCube25
+    100152: pCube27
+    100154: pCube6
+    100156: pCube8
+    100158: pCube8 1
+    100160: pCylinder1
+    100162: pCylinder3
+    100164: polySurface11
+    100166: polySurface13
+    100168: polySurface15
+    100170: polySurface2
+    100172: polySurface3
+    100174: polySurface8
+    100176: polySurface8 1
+    100178: polySurface9
+    100180: polySurface9 1
+    100182: r_face_flap
+    100184: r_hip
+    100186: r_knee
+    100188: r_shoulder_armor0
+    100190: r_shoulder_armor1
+    100192: r_skirt0
+    100194: r_skirt1
+    100196: r_skirt1_fin0
+    100198: r_skirt1_fin1
+    100200: r_skirt1_fin1 1
+    100202: r_skirt2
+    100204: r_skirt2_fin0
+    100206: r_tip
+    100208: //RootNode
+    100210: Shoulder_Right
+    100212: Shoulder_Right1
+    100214: skeleton
+    100216: Skirt_Fin_Right1
+    100218: Skirt_Fin_Right2
+    100220: Sword
+    100222: tail0
+    100224: tail1
+    400000: Arm_Right1
+    400002: Arm_Right2
+    400004: back0
+    400006: back1
+    400008: back2
+    400010: back3
+    400012: back4
+    400014: Body1
+    400016: Body_Control
+    400018: BodyArmorConnector
+    400020: chest
+    400022: Hand_Right1
+    400024: Hand_Right2
+    400026: head
+    400028: Head1
+    400030: Helmet_Forehead
+    400032: Helmet_Inner
+    400034: Helmet_L_Fin
+    400036: Helmet_Sides
+    400038: Hemlet_R_Fin
+    400040: joint16
+    400042: joint16 1
+    400044: joint17
+    400046: joint18
+    400048: joint19
+    400050: joint20
+    400052: joint22
+    400054: joint22 1
+    400056: l_elbow
+    400058: l_elbow 1
+    400060: l_face_flap
+    400062: l_finger
+    400064: l_finger 1
+    400066: l_hip
+    400068: l_knee
+    400070: l_shoulder
+    400072: l_shoulder1
+    400074: l_shoulder_armor0
+    400076: l_shoulder_armor1
+    400078: l_skirt0
+    400080: l_skirt0_fin1
+    400082: l_skirt1
+    400084: l_skirt1_fin0
+    400086: l_skirt1_fin1
+    400088: l_skirt2
+    400090: l_skirt2_fin0
+    400092: l_tip
+    400094: l_wrist
+    400096: l_wrist 1
+    400098: Leg_Left
+    400100: Leg_Right
+    400102: Leg_Tip_Left
+    400104: Leg_Tip_Right
+    400106: LowerBack_Control
+    400108: Main_Control
+    400110: neck0
+    400112: neck1
+    400114: pasted__pCube4
+    400116: pasted__pCube5
+    400118: pCube10
+    400120: pCube11
+    400122: pCube11 1
+    400124: pCube12
+    400126: pCube12 1
+    400128: pCube13
+    400130: pCube14
+    400132: pCube15
+    400134: pCube16
+    400136: pCube17
+    400138: pCube18
+    400140: pCube19
+    400142: pCube20
+    400144: pCube21
+    400146: pCube22
+    400148: pCube23
+    400150: pCube25
+    400152: pCube27
+    400154: pCube6
+    400156: pCube8
+    400158: pCube8 1
+    400160: pCylinder1
+    400162: pCylinder3
+    400164: polySurface11
+    400166: polySurface13
+    400168: polySurface15
+    400170: polySurface2
+    400172: polySurface3
+    400174: polySurface8
+    400176: polySurface8 1
+    400178: polySurface9
+    400180: polySurface9 1
+    400182: r_face_flap
+    400184: r_hip
+    400186: r_knee
+    400188: r_shoulder_armor0
+    400190: r_shoulder_armor1
+    400192: r_skirt0
+    400194: r_skirt1
+    400196: r_skirt1_fin0
+    400198: r_skirt1_fin1
+    400200: r_skirt1_fin1 1
+    400202: r_skirt2
+    400204: r_skirt2_fin0
+    400206: r_tip
+    400208: //RootNode
+    400210: Shoulder_Right
+    400212: Shoulder_Right1
+    400214: skeleton
+    400216: Skirt_Fin_Right1
+    400218: Skirt_Fin_Right2
+    400220: Sword
+    400222: tail0
+    400224: tail1
+    2300000: Arm_Right1
+    2300002: Arm_Right2
+    2300004: BodyArmorConnector
+    2300006: Hand_Right1
+    2300008: Hand_Right2
+    2300010: Head1
+    2300012: Helmet_Forehead
+    2300014: Helmet_Inner
+    2300016: Helmet_L_Fin
+    2300018: Helmet_Sides
+    2300020: Hemlet_R_Fin
+    2300022: Leg_Left
+    2300024: Leg_Right
+    2300026: Leg_Tip_Left
+    2300028: Leg_Tip_Right
+    2300030: pasted__pCube4
+    2300032: pasted__pCube5
+    2300034: pCube10
+    2300036: pCube11
+    2300038: pCube11 1
+    2300040: pCube12
+    2300042: pCube12 1
+    2300044: pCube13
+    2300046: pCube14
+    2300048: pCube15
+    2300050: pCube16
+    2300052: pCube17
+    2300054: pCube18
+    2300056: pCube19
+    2300058: pCube20
+    2300060: pCube21
+    2300062: pCube22
+    2300064: pCube23
+    2300066: pCube25
+    2300068: pCube27
+    2300070: pCube6
+    2300072: pCube8
+    2300074: pCube8 1
+    2300076: pCylinder1
+    2300078: pCylinder3
+    2300080: polySurface11
+    2300082: polySurface13
+    2300084: polySurface15
+    2300086: polySurface2
+    2300088: polySurface3
+    2300090: polySurface8
+    2300092: polySurface8 1
+    2300094: polySurface9
+    2300096: polySurface9 1
+    2300098: Shoulder_Right
+    2300100: Shoulder_Right1
+    2300102: Skirt_Fin_Right1
+    2300104: Skirt_Fin_Right2
+    2300106: Sword
+    3300000: Arm_Right1
+    3300002: Arm_Right2
+    3300004: BodyArmorConnector
+    3300006: Hand_Right1
+    3300008: Hand_Right2
+    3300010: Head1
+    3300012: Helmet_Forehead
+    3300014: Helmet_Inner
+    3300016: Helmet_L_Fin
+    3300018: Helmet_Sides
+    3300020: Hemlet_R_Fin
+    3300022: Leg_Left
+    3300024: Leg_Right
+    3300026: Leg_Tip_Left
+    3300028: Leg_Tip_Right
+    3300030: pasted__pCube4
+    3300032: pasted__pCube5
+    3300034: pCube10
+    3300036: pCube11
+    3300038: pCube11 1
+    3300040: pCube12
+    3300042: pCube12 1
+    3300044: pCube13
+    3300046: pCube14
+    3300048: pCube15
+    3300050: pCube16
+    3300052: pCube17
+    3300054: pCube18
+    3300056: pCube19
+    3300058: pCube20
+    3300060: pCube21
+    3300062: pCube22
+    3300064: pCube23
+    3300066: pCube25
+    3300068: pCube27
+    3300070: pCube6
+    3300072: pCube8
+    3300074: pCube8 1
+    3300076: pCylinder1
+    3300078: pCylinder3
+    3300080: polySurface11
+    3300082: polySurface13
+    3300084: polySurface15
+    3300086: polySurface2
+    3300088: polySurface3
+    3300090: polySurface8
+    3300092: polySurface8 1
+    3300094: polySurface9
+    3300096: polySurface9 1
+    3300098: Shoulder_Right
+    3300100: Shoulder_Right1
+    3300102: Skirt_Fin_Right1
+    3300104: Skirt_Fin_Right2
+    3300106: Sword
+    4300000: Body1
+    4300002: pCylinder3
+    4300004: pCube21
+    4300006: pCube20
+    4300008: pCube22
+    4300010: pCube19
+    4300012: pCube17
+    4300014: pCube18
+    4300016: pCube23
+    4300018: pCylinder1
+    4300020: pCube13
+    4300022: pCube14
+    4300024: pCube15
+    4300026: pCube16
+    4300028: pasted__pCube5
+    4300030: pasted__pCube4
+    4300032: Helmet_Inner
+    4300034: Helmet_Forehead
+    4300036: Head1
+    4300038: polySurface15
+    4300040: Helmet_Sides
+    4300042: Helmet_L_Fin
+    4300044: Hemlet_R_Fin
+    4300046: pCube10
+    4300048: Hand_Right1
+    4300050: pCube11
+    4300052: pCube12
+    4300054: Arm_Right1
+    4300056: pCube8
+    4300058: polySurface2
+    4300060: polySurface3
+    4300062: BodyArmorConnector
+    4300064: Shoulder_Right1
+    4300066: Shoulder_Right
+    4300068: pCube27
+    4300070: Hand_Right2
+    4300072: pCube11
+    4300074: pCube12
+    4300076: Sword
+    4300078: polySurface8
+    4300080: polySurface9
+    4300082: pCube25
+    4300084: polySurface8
+    4300086: polySurface9
+    4300088: Arm_Right2
+    4300090: pCube8
+    4300092: Leg_Tip_Left
+    4300094: Leg_Left
+    4300096: Leg_Tip_Right
+    4300098: Leg_Right
+    4300100: polySurface11
+    4300102: polySurface13
+    4300104: Skirt_Fin_Right2
+    4300106: Skirt_Fin_Right1
+    4300108: pCube6
+    7400000: Default
+    7400002: Idle
+    7400004: IdleFlying
+    7400006: Forward
+    7400008: Dash
+    7400010: Dashing
+    7400012: HeadVulcan
+    7400014: Braking
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Body1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 3
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: IdleFlying
+      takeName: Take 001
+      firstFrame: 123
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Forward
+      takeName: Take 001
+      firstFrame: 183
+      lastFrame: 240
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Dash
+      takeName: Take 001
+      firstFrame: 242
+      lastFrame: 244
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Dashing
+      takeName: Take 001
+      firstFrame: 248
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: HeadVulcan
+      takeName: Take 001
+      firstFrame: 302
+      lastFrame: 361
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: Braking
+      takeName: Take 001
+      firstFrame: 363
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Body1
+        weight: 1
+      - path: Main_Control
+        weight: 1
+      - path: Main_Control/Body_Control
+        weight: 1
+      - path: Main_Control/Body_Control/LowerBack_Control
+        weight: 1
+      - path: skeleton
+        weight: 1
+      - path: skeleton/back0
+        weight: 1
+      - path: skeleton/back0/back1
+        weight: 1
+      - path: skeleton/back0/back1/back2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/Arm_Right1/pCube8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube11
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/Hand_Right1/pCube12
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/joint16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder/l_elbow/l_wrist/l_finger/pCube10
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/Arm_Right2/pCube8
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube11 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Hand_Right2/pCube12 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/joint16 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/l_finger 1/pCube27
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface8 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/pCube25/polySurface9 1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface8
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder1/l_elbow 1/l_wrist
+          1/Sword/polySurface9
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/l_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/l_shoulder_armor0/Shoulder_Right1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/joint19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube19/pCube17/pCube18
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/joint18/pCylinder3/pCube21/pCube23
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube14
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint17/pCylinder1/pCube13/pCube16
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/joint20
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/joint22
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/l_face_flap/pasted__pCube5
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/joint22
+          1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/head/r_face_flap/pasted__pCube4
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Head1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Forehead
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Helmet_L_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/Helmet_Sides/Hemlet_R_Fin
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/neck0/neck1/Helmet_Inner/polySurface15
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/BodyArmorConnector
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/polySurface2/polySurface3
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/r_shoulder_armor1
+        weight: 1
+      - path: skeleton/back0/back1/back2/back3/back4/chest/r_shoulder_armor0/Shoulder_Right
+        weight: 1
+      - path: skeleton/l_hip
+        weight: 1
+      - path: skeleton/l_hip/l_knee
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip
+        weight: 1
+      - path: skeleton/l_hip/l_knee/l_tip/Leg_Tip_Left
+        weight: 1
+      - path: skeleton/l_hip/Leg_Left
+        weight: 1
+      - path: skeleton/r_hip
+        weight: 1
+      - path: skeleton/r_hip/Leg_Right
+        weight: 1
+      - path: skeleton/r_hip/r_knee
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip
+        weight: 1
+      - path: skeleton/r_hip/r_knee/r_tip/Leg_Tip_Right
+        weight: 1
+      - path: skeleton/tail0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/l_skirt0_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt1_fin0/polySurface13
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/l_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/l_skirt0/l_skirt1/l_skirt2/l_skirt2_fin0/polySurface11
+        weight: 1
+      - path: skeleton/tail0/pCube6
+        weight: 1
+      - path: skeleton/tail0/r_skirt0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/r_skirt1_fin1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt1_fin0/Skirt_Fin_Right1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/r_skirt1_fin1
+          1
+        weight: 1
+      - path: skeleton/tail0/r_skirt0/r_skirt1/r_skirt2/r_skirt2_fin0/Skirt_Fin_Right2
+        weight: 1
+      - path: skeleton/tail0/tail1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

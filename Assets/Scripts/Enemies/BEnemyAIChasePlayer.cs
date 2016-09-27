@@ -3,31 +3,45 @@ using System.Collections;
 
 public class BEnemyAIChasePlayer : MonoBehaviour {
 
-    public float changeDirectionInterval = 3;
+    public float changeDirectionInterval = 5;
     public float maxSpeed = 50;
-    private Vector3 wanderDirection;
+
+    public float distFromPlayer = 400;
+    public float distFromPlayerNoise = 50;
+
+    private float distFromPlayerSq;
+    private Vector3 destination;
+    private BPlayer player;
 
 	// Use this for initialization
 	void Start () {
-        StartCoroutine("updateWanderDirection");
-
+        this.player = Object.FindObjectOfType<BGameMaster>().player;
+        print(this.player);
+        this.distFromPlayerSq = this.distFromPlayer * this.distFromPlayer;
+        StartCoroutine(updateDestination());
     }
 	
 	// Update is called once per frame
 	void Update () {
-        Rigidbody rb = this.GetComponent<Rigidbody>();
-        rb.AddForce(this.wanderDirection*100000);
-        if (rb.velocity.magnitude > this.maxSpeed)
-        {
-            rb.velocity = rb.velocity.normalized * this.maxSpeed;
-        }
-	}
+        float step = this.maxSpeed * Time.deltaTime;
+        this.transform.position = Vector3.MoveTowards(transform.position, this.destination, step);
+    }
 
-    IEnumerator updateWanderDirection()
+    IEnumerator updateDestination()
     {
         while (true)
         {
-            this.wanderDirection = Random.onUnitSphere;
+            var displacementFromPlayer = this.transform.position - this.player.transform.position;
+            var distSq = displacementFromPlayer.sqrMagnitude;
+            //if (distSq > this.distFromPlayerSq)
+            //{
+            this.destination = (
+                this.player.transform.position +
+                displacementFromPlayer.normalized * this.distFromPlayer +
+                Random.insideUnitSphere * Random.Range(0, this.distFromPlayerNoise)
+                );
+            //}
+            //this.destination = Random.insideUnitSphere * (this.distFromPlayer + Random.Range(0, this.distFromPlayerNoise));
             yield return new WaitForSeconds(this.changeDirectionInterval);
         }
     }

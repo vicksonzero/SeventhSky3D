@@ -9,6 +9,8 @@ public class BCanvasButtons : MonoBehaviour {
 
     private bool[] shootIsDown = new bool[4];
 
+    private bool shieldIsDown = false;
+
 
     public BMainInput mainInput;
 
@@ -40,6 +42,11 @@ public class BCanvasButtons : MonoBehaviour {
             {
                 this.HShootStep(i);
             }
+        }
+
+        if (this.shieldIsDown)
+        {
+            this.HShieldsStep();
         }
 
         if (this.dashCountdown > 0)
@@ -101,5 +108,21 @@ public class BCanvasButtons : MonoBehaviour {
     public void HShootUp(int index)
     {
         this.shootIsDown[index] = false;
+    }
+
+    public void HShieldsDown()
+    {
+        this.shieldIsDown = true;
+
+    }
+    public void HShieldsStep()
+    {
+
+        mainInput.enableShields();
+    }
+    public void HShieldsUp()
+    {
+        mainInput.disableShields();
+        this.shieldIsDown = false;
     }
 }

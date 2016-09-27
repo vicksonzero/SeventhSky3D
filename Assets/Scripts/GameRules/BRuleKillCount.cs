@@ -10,7 +10,7 @@ public class BRuleKillCount : BRules
 
 	// Use this for initialization
 	void Start () {
-        this.counter.addListener(this);
+        this.counter.updated+=this.checkStat;
 	}
 	
 	// Update is called once per frame

@@ -11,9 +11,11 @@ public class BEnemy : MonoBehaviour {
     public BEnemyKillCounter enemyKillCounter;
     public BOnRadar hpBarListener;
 
+    private BGameMaster game;
+
 	// Use this for initialization
 	void Start () {
-        
+        this.game = GameObject.FindObjectOfType<BGameMaster>();
     }
 	
 	// Update is called once per frame

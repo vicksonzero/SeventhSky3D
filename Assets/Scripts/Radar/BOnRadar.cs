@@ -30,7 +30,7 @@ public class BOnRadar : MonoBehaviour {
 
     public BitArray turnOn = new BitArray(7);
     public enum turnOnIndex { IconGO, IconCloseGO, IconOutsideViewGO, IconRadarGO, hpBarGO, nameTagGO, IconOutOfSightGO };
-    public float radar3DSize = 600;
+    public float radar3DSize = 200;
 
 
 	// Use this for initialization

@@ -6,6 +6,7 @@ public class BGameMaster : MonoBehaviour {
 
     public BPlayer player;
     public BMissionAccomplished missionAccomplishedManager;
+    public BMissionFailed missionFailedManager;
     public BTimer gameTimeTimer;
 
     public string sceneName;
@@ -43,6 +44,21 @@ public class BGameMaster : MonoBehaviour {
             // start end game animation
             this.missionAccomplishedManager.sequenceEndCallbacks += onMissionAccomplishedSequanceFinished;
             this.missionAccomplishedManager.startSequence();
+            this.gameTimeTimer.updateLabels();
+
+            //Application.Quit();
+        }
+        else
+        {
+            // protect player
+            this.player.isInvincible = true;
+
+            // disable player
+            this.player.isControlledBy = BPlayer.ControlParty.GameMaster;
+
+            // start end game animation
+            this.missionFailedManager.sequenceEndCallbacks += onMissionAccomplishedSequanceFinished;
+            this.missionFailedManager.startSequence();
             this.gameTimeTimer.updateLabels();
 
             //Application.Quit();

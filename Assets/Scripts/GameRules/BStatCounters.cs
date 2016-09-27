@@ -4,20 +4,18 @@ using System.Collections.Generic;
 
 public abstract class BStatCounters : MonoBehaviour {
 
-	[Header("BStatCounters")]
-    public List<BRules> listeners;
+    public delegate void CounterUpdatedDelegate();
 
+    //[Header("BStatCounters")]
 
-    public void addListener(BRules subscriber)
-    {
-        this.listeners.Add(subscriber);
-    }
+    public event CounterUpdatedDelegate updated;
+
+    
+    
     public void trigger()
     {
-        foreach (BRules element in this.listeners)
-        {
-            element.checkStat();
-        }
+        this.updated();
+
     }
 
 }

@@ -6,25 +6,33 @@ public class BMainInput : MonoBehaviour {
 
     [Header("Fill in")]
     public BPlayer player;
-    public float dashInterval = 0.5f;
+    public float dashInterval = 0.3f;
+    public BCameraDragAim bCameraDragAim;
 
-    [Header("private, inspected")]
+    [Header("private, just for inspection")]
     public float dashCountdown = 0;
     public float dashCount = 0;
 
+
     // Use this for initialization
     void Start () {
-	
-	}
+
+        if (this.bCameraDragAim == null) this.bCameraDragAim = this.GetComponent<BCameraDragAim>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.position = this.player.transform.position;
+        // follow player
+        this.bCameraDragAim.transform.position = this.player.transform.position;
+
+
+        // input
         if (Input.GetButton("Acceleration"))
         {
             this.accelerate();
-
         }
+
         if (Input.GetButtonDown("Acceleration"))
         {
             if (this.dashCountdown > 0 && this.dashCount == 1)
@@ -37,6 +45,7 @@ public class BMainInput : MonoBehaviour {
                 this.dashCount = 1;
             }
         }
+
         if (this.dashCountdown > 0)
         {
             this.dashCountdown -= 1 * Time.deltaTime;
@@ -45,6 +54,7 @@ public class BMainInput : MonoBehaviour {
         {
             this.dashCount = 0;
         }
+
         if (Input.GetButtonDown("Brake"))
         {
             this.startDecelerate();
@@ -53,11 +63,16 @@ public class BMainInput : MonoBehaviour {
         {
             this.stopDecelerate();
         }
+
 #if UNITY_EDITOR
-        if (Input.GetAxis("Fire1") > 0)
-        {
-            this.weaponTryShoot(1);
-        }
+
+        //if (Input.GetAxis("Fire1") > 0)
+        //{
+        //    this.weaponTryShoot(1);
+        //}
+
+        this.tuneCamera(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
 #endif
     }
 
@@ -89,4 +104,22 @@ public class BMainInput : MonoBehaviour {
         this.updatePlayerRotation();
         return this.player.weaponTryShoot(index);
     }
+
+    public void enableShields()
+    {
+        this.updatePlayerRotation();
+        this.player.enableShields();
+    }
+
+    public void disableShields()
+    {
+        this.player.disableShields();
+    }
+
+    public void tuneCamera(float horizontal, float vertical)
+    {
+        this.bCameraDragAim.rotateHorizontal(horizontal);
+        this.bCameraDragAim.rotateVertical(vertical);
+    }
+
 }
