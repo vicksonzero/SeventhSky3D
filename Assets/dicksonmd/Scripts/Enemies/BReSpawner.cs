@@ -36,7 +36,7 @@ public class BReSpawner : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        this.transform.position = this.player.transform.position;
+
     }
 
     void onEnemyCountUpdated()
