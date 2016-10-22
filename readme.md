@@ -5,7 +5,7 @@ A full body motion Mobile Action game. Fan remake of a 2006 flash game `SeventhS
 [http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html](http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html)
 
 
-![Screenshot. A red and white feminine mech flying in the sky, with a few orb-shaped enemies in the background][screenshot1]
+![Screenshot. A red and white feminine mech flying in the sky, barely escaping enemy fire from the background][screenshot1]
 
 # Download
 
