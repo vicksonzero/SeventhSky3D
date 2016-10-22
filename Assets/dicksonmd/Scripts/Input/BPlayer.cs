@@ -51,8 +51,12 @@ public class BPlayer : BUnit {
 	// Update is called once per frame
 	void Update () {
         string speedMeterText = "";
-        int speedLevel = (int)(this.rb.velocity.magnitude/(this.topSpeed/8.0));
+        int speedLevel = (int)(this.rb.velocity.magnitude/(this.topSpeed/8.0f));
         for(int i=0; i < speedLevel; i++)
+        {
+            speedMeterText += "=";
+        }
+        if (this.rb.velocity.magnitude > 0)
         {
             speedMeterText += "=";
         }
