@@ -1,7 +1,6 @@
 # Seventh Sky 3D remake
 
-A full body motion Mobile Action game. Fan remake of a 2006 flash game `SeventhSky`:   
-[http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html](http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html)
+A full body motion Mobile Action game. Fan remake of a 2006 flash game `Seventh Sky`.
 
 By Dickson Chui. Original game by TANAKA.U
 
@@ -27,6 +26,10 @@ Avoid too much sun, as you may need to **look up:**.
 Try **stretching yourself** before playing, as this game is intense and requires you aiming at all angles.
 
 # Credits
+
+### Original game by TANAKA.U
+
+[http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html](http://nextframe.jp/flash/seventhsky_refine/seventhsky_refine.html)
 
 
 [screenshot1]: https://github.com/vicksonzero/SeventhSky3D/blob/master/screenshots/20161001235444_p.jpg
