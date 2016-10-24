@@ -16,7 +16,7 @@ public class BUnit : MonoBehaviour
     public Transform dieFirework;
 
     public delegate void DamageTakenDelegate();
-    public event DamageTakenDelegate damageTaken;
+    public event DamageTakenDelegate hpChanged;
 
     public bool isInvincible = false;
 
@@ -53,9 +53,9 @@ public class BUnit : MonoBehaviour
 
     protected virtual void onHPChanged()
     {
-        if (this.damageTaken != null)
+        if (this.hpChanged != null)
         {
-            this.damageTaken();
+            this.hpChanged();
         }
     }
 
@@ -84,7 +84,7 @@ public class BUnit : MonoBehaviour
 
         this.dieFirework = other.dieFirework;
 
-        this.damageTaken = other.damageTaken;
+        this.hpChanged = other.hpChanged;
     }
 
 

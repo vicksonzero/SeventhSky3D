@@ -9,7 +9,7 @@ public class BRuleCannotDie : BRules
     // Use this for initialization
     void Start()
     {
-        this.player.damageTaken += this.checkStat;
+        this.player.hpChanged += this.checkStat;
 
     }
 

@@ -8,7 +8,6 @@ public class BEnemy : BUnit {
     public BEnemyKillCounter enemyKillCounter;
 
     private BGameMaster game;
-    public BOnRadar hpBarListener;
 
 
     // Use this for initialization
@@ -24,7 +23,6 @@ public class BEnemy : BUnit {
 
     protected override void onHPChanged()
     {
-        //this.hpBarListener.updateHPBar(this.hp, this.maxhp);
         base.onHPChanged();
     }
 

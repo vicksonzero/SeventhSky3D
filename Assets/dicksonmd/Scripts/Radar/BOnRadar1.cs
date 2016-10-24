@@ -108,7 +108,6 @@ public class BOnRadar1 : MonoBehaviour
 
                 this.drawHPBar(screenPos);
                 this.turnOn[(int)BOnRadar.turnOnIndex.hpBarGO] = true;
-
             }
         }
         if (relativePos.sqrMagnitude <= sqDistance)
