@@ -24,7 +24,7 @@ public class BEnemy : BUnit {
 
     protected override void onHPChanged()
     {
-        this.hpBarListener.updateHPBar(this.hp, this.maxhp);
+        //this.hpBarListener.updateHPBar(this.hp, this.maxhp);
         base.onHPChanged();
     }
 

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
-public class BEnemySAMShootPlayer : MonoBehaviour {
+public class BEnemySAMShootPlayer : MonoBehaviour
+{
 
     public float repeatInterval = 3;
     public float repeatIntervalNoise = 1;
@@ -13,8 +15,8 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
     public float damage = 5;
     public float bulletSpeed = 400;
 
-    public Transform bulletSpawnVector;
-    public BEnemyProjectile bullet;
+    public Transform[] bulletSpawnVectors;
+    public BEnemyMissile bullet;
     public Transform firework;
 
     private BGameMaster game;
@@ -23,8 +25,11 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
     private Vector3 aim;
     private Vector3 newAim;
 
+    private BEnemyMissile bulletGO;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         this.game = GameObject.FindObjectOfType<BGameMaster>();
         StartCoroutine("updateWanderDirection");
         this.minDistanceSq = this.minDistance * this.minDistance;
@@ -32,10 +37,11 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
         var player = this.game.player;
         this.aim = player.transform.position - this.transform.position;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
     IEnumerator updateWanderDirection()
     {
@@ -43,7 +49,7 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
         {
             var player = this.game.player;
             this.newAim = player.transform.position - this.transform.position;
-            if(this.newAim.sqrMagnitude < this.minDistanceSq)
+            if (this.newAim.sqrMagnitude < this.minDistanceSq)
             {
                 print("Enemy shoot");
                 StartCoroutine("doShoot");
@@ -54,42 +60,30 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
 
     IEnumerator doShoot()
     {
-        var player = this.game.player;
-        this.newAim = player.transform.position - this.transform.position;
-        var directionVector = Vector3.Slerp(this.aim, this.newAim, 0.8f);
-        var bullet = this.makeBullet(this.bulletSpawnVector.position, directionVector);
+        // if bullet has disappeared
+        if (bulletGO == null)
+        {
+            var bulletSpawnVectorIndex = Random.Range(0, this.bulletSpawnVectors.Length);
+            var bulletSpawnVector = this.bulletSpawnVectors[bulletSpawnVectorIndex];
 
-        yield return new WaitForSeconds(this.cooldown);
+            var player = this.game.player;
 
-        this.newAim = player.transform.position - this.transform.position;
-        directionVector = Vector3.Slerp(this.aim, this.newAim, 0.9f);
-        bullet = this.makeBullet(this.bulletSpawnVector.position, directionVector);
+            this.newAim = player.transform.position - this.transform.position;
+            var directionVector = Vector3.Slerp(this.aim, this.newAim, 0.8f);
+            var bullet = this.makeBullet(bulletSpawnVector.position, directionVector);
+            this.bulletGO = bullet;
 
-        yield return new WaitForSeconds(this.cooldown);
+            yield return new WaitForSeconds(this.cooldown);
 
-        this.newAim = player.transform.position - this.transform.position;
-        directionVector = Vector3.Slerp(this.aim, this.newAim, 1);
-        bullet = this.makeBullet(this.bulletSpawnVector.position, directionVector);
+            this.aim = this.newAim;
 
-        yield return new WaitForSeconds(this.cooldown);
-
-        this.newAim = player.transform.position - this.transform.position;
-        directionVector = Vector3.Slerp(this.aim, this.newAim, 1.1f);
-        bullet = this.makeBullet(this.bulletSpawnVector.position, directionVector);
-
-        yield return new WaitForSeconds(this.cooldown);
-
-        this.newAim = player.transform.position - this.transform.position;
-        directionVector = Vector3.Slerp(this.aim, this.newAim, 1.2f);
-        bullet = this.makeBullet(this.bulletSpawnVector.position, directionVector);
-
-        this.aim = this.newAim;
+        }
     }
 
 
-    BEnemyProjectile makeBullet(Vector3 spawnPoint, Vector3 direction)
+    BEnemyMissile makeBullet(Vector3 spawnPoint, Vector3 direction)
     {
-        var bull = Instantiate(this.bullet, spawnPoint, Quaternion.LookRotation(direction)) as BEnemyProjectile;
+        var bull = Instantiate(this.bullet, spawnPoint, Quaternion.LookRotation(direction)) as BEnemyMissile;
 
         Physics.IgnoreCollision(bull.GetComponentInChildren<Collider>(), this.GetComponentInChildren<Collider>());
         bull.damage = this.damage;
@@ -99,6 +93,7 @@ public class BEnemySAMShootPlayer : MonoBehaviour {
         rb.velocity = direction.normalized * this.bulletSpeed;
         return bull;
     }
+
     void OnDestroy()
     {
         this.StopAllCoroutines();
