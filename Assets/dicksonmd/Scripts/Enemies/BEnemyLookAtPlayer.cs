@@ -8,7 +8,8 @@ public class BEnemyLookAtPlayer : MonoBehaviour
 
     public float rotateSpeed = 20;
 
-    public float updateInterval = 0;
+    public float updateInterval = 1;
+    public float updateIntervalNoise = 1;
 
     private BPlayer player;
 
@@ -19,7 +20,7 @@ public class BEnemyLookAtPlayer : MonoBehaviour
     {
         this.player = GameObject.FindObjectOfType<BGameMaster>().player;
         this.targetRotation = this.transform.rotation;
-        this.StartCoroutine(this.updateRotationCoroutine(this.updateInterval));
+        this.StartCoroutine(this.updateRotationCoroutine(this.updateInterval, this.updateIntervalNoise));
     }
 
     // Update is called once per frame
@@ -40,14 +41,14 @@ public class BEnemyLookAtPlayer : MonoBehaviour
         this.targetRotation = Quaternion.LookRotation(displacement, Vector3.up);
     }
 
-    IEnumerator updateRotationCoroutine(float interval)
+    IEnumerator updateRotationCoroutine(float interval, float noise)
     {
         if (interval > 0)
         {
             while (true)
             {
                 this.updateTargetRotation();
-                yield return new WaitForSeconds(interval);
+                yield return new WaitForSeconds(interval + Random.Range(0, noise));
             }
         }
     }

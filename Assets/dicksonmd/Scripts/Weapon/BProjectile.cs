@@ -30,6 +30,14 @@ public class BProjectile : MonoBehaviour {
 
             Destroy(this.gameObject);
         }
+        if (col.gameObject.layer == LayerMask.NameToLayer("WeaponPhysical"))
+        {
+            Vector3 hitpoint = col.contacts[0].point;
+            col.gameObject.GetComponentInParent<BUnit>().takeDamage(this.damage);
+            Instantiate(this.firework, hitpoint, Quaternion.identity);
+
+            Destroy(this.gameObject);
+        }
 
         if (col.gameObject.layer == LayerMask.NameToLayer("Structures"))
         {
