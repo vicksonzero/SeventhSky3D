@@ -17,6 +17,7 @@ public class BEnemyMissile : BProjectile
     // Use this for initialization
     void Start()
     {
+        GameObject.FindObjectOfType<BUISound>().playMissileAlert();
         StartCoroutine(updateTarget());
     }
 
@@ -102,7 +103,7 @@ public class BEnemyMissile : BProjectile
                     this.target = null;
                 }
             }
-                
+
             // get a new target if target lost
             if (this.target == null)
             {

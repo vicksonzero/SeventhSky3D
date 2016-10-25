@@ -5,16 +5,19 @@ using System.Linq;
 public class BEnemySAMShootPlayer : MonoBehaviour
 {
 
+    [Header("Config")]
     public float repeatInterval = 3;
-    public float repeatIntervalNoise = 1;
+    public float repeatIntervalNoise = 3;
 
-    public float minDistance = 300;
+    public float minDistance = 600;
 
-    public float cooldown = 0.3f;
+    public float cooldown = 0.05f;
 
-    public float damage = 5;
-    public float bulletSpeed = 400;
+    public float damage = 3;
+    public float bulletSpeed = 20;
+    public float bulletSpeedNoise = 3;
 
+    [Header("Linking")]
     public Transform[] bulletSpawnVectors;
     public BEnemyMissile bullet;
     public Transform firework;
@@ -88,9 +91,10 @@ public class BEnemySAMShootPlayer : MonoBehaviour
         Physics.IgnoreCollision(bull.GetComponentInChildren<Collider>(), this.GetComponentInChildren<Collider>());
         bull.damage = this.damage;
         bull.firework = this.firework;
+        var speedNoise = Random.Range(0, this.bulletSpeedNoise);
         var rb = bull.GetComponent<Rigidbody>();
         //rb.AddForce( direction * 100000, ForceMode.Acceleration);
-        rb.velocity = direction.normalized * this.bulletSpeed;
+        rb.velocity = direction.normalized * (this.bulletSpeed + speedNoise);
         return bull;
     }
 
