@@ -49,11 +49,22 @@ public class BMissile : BProjectile
 
             Destroy(this.gameObject);
         }
+        if (col.gameObject.layer == LayerMask.NameToLayer("WeaponPhysical"))
+        {
+            Vector3 hitpoint = col.contacts[0].point;
+            BUnit bunit = col.gameObject.GetComponentInParent<BUnit>();
+            if (bunit) bunit.takeDamage(this.damage);
+            Instantiate(this.firework, hitpoint, Quaternion.identity);
+
+            Destroy(this.gameObject);
+        }
 
         if (col.gameObject.layer == LayerMask.NameToLayer("Structures"))
         {
             Vector3 hitpoint = col.contacts[0].point;
             Instantiate(this.firework, hitpoint, Quaternion.identity);
+            BUnit bunit = col.gameObject.GetComponentInParent<BUnit>();
+            if (bunit) bunit.takeDamage(this.damage);
             Destroy(this.gameObject);
         }
         if (col.gameObject.layer == LayerMask.NameToLayer("Player"))

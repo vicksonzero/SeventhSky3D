@@ -45,6 +45,7 @@ public class BOnRadarShootingRange : MonoBehaviour
         if (this.useIconClose)
         {
             this.IconCloseGO = Instantiate(this.IconClose, Vector3.zero, Quaternion.identity) as RectTransform;
+            print(this.name + " " + this.onRadar.radarCanvas);
             this.IconCloseGO.SetParent(this.onRadar.radarCanvas);
         }
 

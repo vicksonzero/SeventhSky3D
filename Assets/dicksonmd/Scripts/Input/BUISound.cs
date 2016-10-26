@@ -4,7 +4,10 @@ using System.Collections;
 public class BUISound : MonoBehaviour {
 
     public AudioClip missileAlertSound;
-    public int missileAlertSoundIndex = 1;
+    public int missileAlertSoundIndex = 0;
+
+    public AudioClip newWaveAlertSound;
+    public int newWaveAlertSoundIndex = 1;
 
     private AudioSource[] audioSources;
 
@@ -44,4 +47,9 @@ public class BUISound : MonoBehaviour {
         source.loop = false;
     }
 
+    public void playNewWaveAlert()
+    {
+        var source = this.audioSources[this.newWaveAlertSoundIndex];
+        if (!source.isPlaying) source.PlayOneShot(this.newWaveAlertSound);
+    }
 }

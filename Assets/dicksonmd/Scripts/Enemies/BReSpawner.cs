@@ -5,8 +5,9 @@ using System.Linq;
 
 public class BReSpawner : MonoBehaviour {
 
-    public Transform enemy;
-    public int noofEnemy = 5;
+    public int noofEnemy = 6;
+    public BUnit[] enemyChoices;
+    public float[] enemyWeights;
     public float roomRadius = 300;
     public float maxEnemyDistance = 400;
 
@@ -87,14 +88,36 @@ public class BReSpawner : MonoBehaviour {
         yield return new WaitForSeconds(delay);
         var originalPosition = this.player.transform.position;
 
+        var createdCount = 0;
+
         for (int i = this.noofEnemy; i-- > 0;)
         {
             Vector3 spawnPos = originalPosition + Random.insideUnitSphere * roomRadius;
+            Transform enemy = this.pickAnEnemy();
             Transform go = Instantiate(enemy, spawnPos, Quaternion.identity) as Transform;
             go.SetParent(this.transform);
             go.GetComponent<BEnemy>().enemyCounter = this.enemyCounter;
             go.GetComponent<BEnemy>().enemyKillCounter = this.enemyKillCounter;
             this.enemyCounter.login();
+            createdCount++;
         }
+        if (createdCount > 0)
+        {
+            GameObject.FindObjectOfType<BUISound>().playNewWaveAlert();
+        }
+    }
+
+    Transform pickAnEnemy()
+    {
+        var weights = new Dictionary<BUnit, float>();
+        for(int i=0; i < this.enemyChoices.Length && i < this.enemyWeights.Length; i++)
+        {
+            weights.Add(this.enemyChoices[i], this.enemyWeights[i]); // 90% spawn chance;
+
+        }
+
+        BUnit selected = WeightedRandomizer.From(weights).TakeOne(); // Strongly-typed object returned. No casting necessary.
+        print(selected);
+        return selected.transform;
     }
 }

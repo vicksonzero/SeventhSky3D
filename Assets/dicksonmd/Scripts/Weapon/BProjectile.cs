@@ -33,7 +33,8 @@ public class BProjectile : MonoBehaviour {
         if (col.gameObject.layer == LayerMask.NameToLayer("WeaponPhysical"))
         {
             Vector3 hitpoint = col.contacts[0].point;
-            col.gameObject.GetComponentInParent<BUnit>().takeDamage(this.damage);
+            BUnit bunit = col.gameObject.GetComponentInParent<BUnit>();
+            if (bunit) bunit.takeDamage(this.damage);
             Instantiate(this.firework, hitpoint, Quaternion.identity);
 
             Destroy(this.gameObject);
@@ -43,6 +44,8 @@ public class BProjectile : MonoBehaviour {
         {
             Vector3 hitpoint = col.contacts[0].point;
             Instantiate(this.firework, hitpoint, Quaternion.identity);
+            BUnit bunit = col.gameObject.GetComponentInParent<BUnit>();
+            if(bunit) bunit.takeDamage(this.damage);
             Destroy(this.gameObject);
         }
         if (col.gameObject.layer == LayerMask.NameToLayer("Player"))
