@@ -95,12 +95,12 @@ public abstract class BWeapons :MonoBehaviour {
     {
         this.selectedCounts++;
         this.holdWeaponTimer.startTimer();
-        this.selectedEvent();
+        if (this.selectedEvent != null) this.selectedEvent();
     }
 
     public virtual void deselect()
     {
         this.holdWeaponTimer.stopTimer();
-        this.deselectedEvent();
+        if (this.deselectedEvent != null) this.deselectedEvent();
     }
 }

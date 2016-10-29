@@ -1,9 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Net;
-using System.Collections.Specialized;
-using System.Text;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class BAnalyticsGA : MonoBehaviour
 {
@@ -20,17 +17,20 @@ public class BAnalyticsGA : MonoBehaviour
 
     public enum gaCustomMetricLabel { none, PlayerHP, PlayTime };
 
+    // TODO: move to enemy kill counters
+    private Dictionary<string, int> killCount = new Dictionary<string, int>();
+
     void Awake()
     {
         if (!i)
         {
             i = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             //DontDestroyOnLoad(googleAnalytics.gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
@@ -88,14 +88,22 @@ public class BAnalyticsGA : MonoBehaviour
 
     public static void logKill(string enemyType)
     {
+        // count enemies
+        int count = 0;
+        i.killCount.TryGetValue(enemyType, out count);
+        count++;
+        i.killCount[enemyType] = count;
+
         if (i.verbose)
         {
-            print("logKill(" + enemyType + ")");
+            print("logKill(" + enemyType + "): " + count);
         }
+
         i.googleAnalytics.LogEvent(new EventHitBuilder()
             .SetEventCategory("Combat")
             .SetEventAction("KilledEnemy")
             .SetEventLabel(enemyType)
+            .SetEventValue(count)
         );
     }
 
