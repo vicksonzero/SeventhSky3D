@@ -18,6 +18,7 @@ public class BEnemyMissile : BProjectile
     void Start()
     {
         GameObject.FindObjectOfType<BUISound>().playMissileAlert();
+        this.GetComponent<BUnit>().beforeDie += this.onDie;
         StartCoroutine(updateTarget());
     }
 
@@ -140,6 +141,11 @@ public class BEnemyMissile : BProjectile
             }
         }
         return result;
+    }
+
+    public void onDie()
+    {
+        BAnalyticsGA.logKill(this.GetComponent<BUnit>().unitName);
     }
 
 }

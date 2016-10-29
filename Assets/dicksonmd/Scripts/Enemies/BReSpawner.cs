@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class BReSpawner : MonoBehaviour {
+public class BReSpawner : MonoBehaviour
+{
 
     public int noofEnemy = 6;
     public BUnit[] enemyChoices;
@@ -25,24 +26,29 @@ public class BReSpawner : MonoBehaviour {
 
     private float maxEnemyDistanceSq;
     private List<BEnemy> enemies = new List<BEnemy>();
+    private Coroutine spawningTimer;
+
+    private LapTimer gaReadManualTime = new LapTimer();
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         this.maxEnemyDistanceSq = this.maxEnemyDistance * this.maxEnemyDistance;
         this.enemyCounter.enemyCountUpdated += this.onEnemyCountUpdated;
-        StartCoroutine(this.spawnNextWave(5));
         StartCoroutine(this.checkDistances(5));
 
+        this.gaReadManualTime.startTimer();
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
     }
 
     void onEnemyCountUpdated()
     {
-        if(this.enemyCounter.count <= 0)
+        if (this.enemyCounter.count <= 0)
         {
             StartCoroutine(this.spawnNextWave(this.timeBetweenWaves));
         }
@@ -50,7 +56,8 @@ public class BReSpawner : MonoBehaviour {
 
     IEnumerator checkDistances(float interval = 1)
     {
-        while (true) {
+        while (true)
+        {
             yield return new WaitForSeconds(interval);
             var allTooFar = this.allTooFar();
             if (allTooFar)
@@ -68,7 +75,8 @@ public class BReSpawner : MonoBehaviour {
     private bool allTooFar()
     {
         BEnemy[] enemies = Object.FindObjectsOfType<BEnemy>();
-        return enemies.ToList().All((enemy) => {
+        return enemies.ToList().All((enemy) =>
+        {
             var distanceSq = (enemy.transform.position - this.player.transform.position).sqrMagnitude;
             //print(distanceSq);
             return (distanceSq > this.maxEnemyDistanceSq);
@@ -78,7 +86,8 @@ public class BReSpawner : MonoBehaviour {
     private void removeAllEnemies()
     {
         BEnemy[] enemies = Object.FindObjectsOfType<BEnemy>();
-        enemies.ToList().ForEach((enemy) => {
+        enemies.ToList().ForEach((enemy) =>
+        {
             enemy.remove();
         });
     }
@@ -90,10 +99,17 @@ public class BReSpawner : MonoBehaviour {
 
         var createdCount = 0;
 
+        var counts = new Dictionary<BUnit, int>();
+        for (int i = 0; i < this.enemyChoices.Length && i < this.enemyWeights.Length; i++)
+        {
+            counts.Add(this.enemyChoices[i], 0);
+        }
+
         for (int i = this.noofEnemy; i-- > 0;)
         {
             Vector3 spawnPos = originalPosition + Random.insideUnitSphere * roomRadius;
             Transform enemy = this.pickAnEnemy();
+            counts[enemy.GetComponent<BUnit>()]++;
             Transform go = Instantiate(enemy, spawnPos, Quaternion.identity) as Transform;
             go.SetParent(this.transform);
             go.GetComponent<BEnemy>().enemyCounter = this.enemyCounter;
@@ -104,20 +120,62 @@ public class BReSpawner : MonoBehaviour {
         if (createdCount > 0)
         {
             GameObject.FindObjectOfType<BUISound>().playNewWaveAlert();
+
+            var countString = counts.Aggregate(
+                "",
+                (result, pair) =>
+                {
+                    if (pair.Value > 0)
+                    {
+                        return result + (result == "" ? "" : ", ") + pair.Value + " " + pair.Key.unitName;
+                    }
+                    else {
+                        return result;
+                    }
+                });
+            BUIMessage.log("Incoming: " + countString);
         }
     }
 
     Transform pickAnEnemy()
     {
         var weights = new Dictionary<BUnit, float>();
-        for(int i=0; i < this.enemyChoices.Length && i < this.enemyWeights.Length; i++)
+        for (int i = 0; i < this.enemyChoices.Length && i < this.enemyWeights.Length; i++)
         {
             weights.Add(this.enemyChoices[i], this.enemyWeights[i]); // 90% spawn chance;
 
         }
 
         BUnit selected = WeightedRandomizer.From(weights).TakeOne(); // Strongly-typed object returned. No casting necessary.
-        print(selected);
         return selected.transform;
     }
+
+    public void startSpawning()
+    {
+        //var hadStopped = false;
+        if(this.spawningTimer != null)
+        {
+            StopCoroutine(this.spawningTimer);
+            //hadStopped = true;
+        }
+        this.spawningTimer = StartCoroutine(this.spawnNextWave(5));
+
+        this.gaReadManualTime.stopTimer();
+
+        BAnalyticsGA.logReadManualTime(this.gaReadManualTime.elapsedTime);
+        BAnalyticsGA.logGameStart();
+
+        //return hadStopped;
+    }
+
+    public bool stopSpawning()
+    {
+        if (this.spawningTimer != null)
+        {
+            StopCoroutine(this.spawningTimer);
+            return true;
+        }
+        return false;
+    }
+
 }

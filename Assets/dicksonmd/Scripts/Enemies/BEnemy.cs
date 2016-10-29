@@ -29,6 +29,7 @@ public class BEnemy : BUnit {
     public override void die()
     {
         this.enemyKillCounter.add();
+        BAnalyticsGA.logKill(this.unitName);
         base.die();
     }
 

@@ -45,7 +45,7 @@ public class BEnemyAIShootPlayer : MonoBehaviour {
             this.newAim = player.transform.position - this.transform.position;
             if(this.newAim.sqrMagnitude < this.minDistanceSq)
             {
-                print("Enemy shoot");
+                //print("Enemy shoot");
                 StartCoroutine("doShoot");
             }
             yield return new WaitForSeconds(this.repeatInterval + Random.Range(0, this.repeatIntervalNoise));

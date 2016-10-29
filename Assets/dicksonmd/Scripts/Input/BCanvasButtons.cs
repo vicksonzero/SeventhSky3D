@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BCanvasButtons : MonoBehaviour {
@@ -18,6 +19,9 @@ public class BCanvasButtons : MonoBehaviour {
     public int dashCount = 0;
 
     public float dashInterval = 0.5f;
+
+    public bool useScreenshotButton = false;
+    public Button screenshotButton; 
 
     // Use this for initialization
     void Start () {

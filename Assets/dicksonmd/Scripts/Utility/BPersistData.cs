@@ -3,7 +3,6 @@ using System.Collections;
 
 
 public class BPersistData : MonoBehaviour {
-    public static BPersistData i;
 #if UNITY_EDITOR
     [Readme(UnityEditor.MessageType.Warning)]
     public string readme = "Persistent data object for shared data. Can start alone.\n\nDon't change value in inspector\nChange in prefab.";
@@ -11,6 +10,7 @@ public class BPersistData : MonoBehaviour {
     public string version = "pre_2.15";
     public string lastChangedDate = "2016-10-13";
 
+    public static BPersistData i;
     void Awake()
     {
         if (!i)

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Linq;
 
-public class BPlayer : BUnit {
+public class BPlayer : BUnit
+{
 
     [Header("Data")]
 
@@ -38,21 +39,22 @@ public class BPlayer : BUnit {
 
     public int currentWeaponIndex = 1;
 
-
     private Rigidbody rb;
 
     // Use this for initialization
-    public override void Start () {
+    public override void Start()
+    {
         base.Start();
         this.rb = this.GetComponent<Rigidbody>();
 
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         string speedMeterText = "";
-        int speedLevel = (int)(this.rb.velocity.magnitude/(this.topSpeed/8.0f));
-        for(int i=0; i < speedLevel; i++)
+        int speedLevel = (int)(this.rb.velocity.magnitude / (this.topSpeed / 8.0f));
+        for (int i = 0; i < speedLevel; i++)
         {
             speedMeterText += "=";
         }
@@ -65,11 +67,11 @@ public class BPlayer : BUnit {
 
         this.updateRotation();
         this.updateAnimation();
-	}
+    }
 
     private void updateRotation()
     {
-        if(this.transform.rotation != this.targetRotation)
+        if (this.transform.rotation != this.targetRotation)
         {
             this.transform.rotation = Quaternion.Slerp(this.transform.rotation, this.targetRotation, Time.deltaTime * this.turnSpeed);
         }
@@ -84,7 +86,7 @@ public class BPlayer : BUnit {
             this.rb.velocity *= this.topSpeed / this.rb.velocity.magnitude;
         }
         this.setAnimation(PacifixAnimState.Forward);
-            
+
     }
     public void dash()
     {
@@ -128,13 +130,18 @@ public class BPlayer : BUnit {
         // TODO if can change, i.e.
         // is not changing weapon, weapon is not being used, etc
         // ask the weapon for it
-        if(this.weapons[index] == null)
+        if (this.weapons[index] == null)
         {
             print("No weapon index " + index + ". did not change");
             return false;
         }
-        this.currentWeaponIndex = index;
         var weapon = this.weapons[this.currentWeaponIndex];
+        weapon.deselect();
+
+        this.currentWeaponIndex = index;
+        weapon = this.weapons[this.currentWeaponIndex];
+        weapon.select();
+
         return true;
     }
 
@@ -149,7 +156,7 @@ public class BPlayer : BUnit {
 
         if (this.animState != newState)
         {
-            if(this.animState == PacifixAnimState.Dash || this.animState == PacifixAnimState.Dashing)
+            if (this.animState == PacifixAnimState.Dash || this.animState == PacifixAnimState.Dashing)
             {
                 if (newState == PacifixAnimState.Forward) return false;
             }
@@ -163,7 +170,7 @@ public class BPlayer : BUnit {
     {
         string nextFrameName = "";
         //print(this.animState);
-        
+
         // switch state depending on current state
         switch (this.animState)
         {
@@ -238,11 +245,17 @@ public class BPlayer : BUnit {
             print("duplicate weapon index " + index + ". Overriding...");
         }
         this.weapons[index] = weapon;
+
         if (index >= 1)
         {
             var button = this.weaponButtons[index - 1];
             button.transform.Find("Text").GetComponent<Text>().text = weapon.weaponName;
             weapon.weaponButton = button;
+
+            if (index == this.currentWeaponIndex)
+            {
+                weapon.holdWeaponTimer.startTimer();
+            }
         }
     }
 
@@ -272,4 +285,26 @@ public class BPlayer : BUnit {
     {
 
     }
+
+    public void gaLogKeepWeaponTimes(float gameTime)
+    {
+        this.weapons.ToList().ForEach((weapon) => {
+            if (weapon != null)
+            {
+                weapon.holdWeaponTimer.stopTimer();
+                BAnalyticsGA.logKeepWeaponTime(weapon.weaponName, (weapon.holdWeaponTimer.elapsedTime / gameTime)*100);
+            }
+        });
+    }
+
+    //public void gaLogSwitcWeaponCounts()
+    //{
+    //    this.weapons.ToList().ForEach((weapon) => {
+    //        if (weapon != null)
+    //        {
+    //            weapon.holdWeaponTimer.stopTimer();
+    //            BAnalyticsGA(weapon.weaponName, weapon.holdWeaponTimer.elapsedTime);
+    //        }
+    //    });
+    //}
 }

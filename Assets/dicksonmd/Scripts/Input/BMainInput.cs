@@ -63,6 +63,7 @@ public class BMainInput : MonoBehaviour {
         {
             this.stopDecelerate();
         }
+        
 
 #if UNITY_EDITOR
 
@@ -87,6 +88,11 @@ public class BMainInput : MonoBehaviour {
         if (Input.GetButtonDown("Weapon03"))
         {
             this.changeToWeapon(3);
+        }
+
+        if (Input.GetButtonDown("Screenshot"))
+        {
+            this.takeScreenshot();
         }
 #endif
     }
@@ -145,6 +151,13 @@ public class BMainInput : MonoBehaviour {
     {
         this.bCameraDragAim.rotateHorizontal(horizontal);
         this.bCameraDragAim.rotateVertical(vertical);
+    }
+
+    public void takeScreenshot()
+    {
+        string dateString = DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss_fff");
+        print(Application.persistentDataPath);
+        Application.CaptureScreenshot("screenshots/Screenshot " + dateString + ".png");
     }
 
 }

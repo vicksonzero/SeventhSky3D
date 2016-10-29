@@ -17,6 +17,8 @@ public class BGameMaster : MonoBehaviour
 
     public lockCursorBehaviour lockCursorBehaviour;
 
+    public GoogleAnalyticsV4 googleAnalytics;
+
     // Use this for initialization
     void Start()
     {
@@ -45,14 +47,22 @@ public class BGameMaster : MonoBehaviour
     public void gameOver(bool isWin)
     {
         print("Game over: " + (isWin ? "WIN" : "LOSE"));
+
+        // common
+
+        // protect player
+        this.player.isInvincible = true;
+
+        // disable player
+        this.player.isControlledBy = BPlayer.ControlParty.GameMaster;
+
+        // GA logging
+        this.player.gaLogKeepWeaponTimes(this.gameTimeTimer.readTimer());
+
+        BAnalyticsGA.logGameEnd(isWin);
+
         if (isWin)
         {
-            // protect player
-            this.player.isInvincible = true;
-
-            // disable player
-            this.player.isControlledBy = BPlayer.ControlParty.GameMaster;
-
             // start end game animation
             this.missionAccomplishedManager.sequenceEndCallbacks += onMissionAccomplishedSequanceFinished;
             this.missionAccomplishedManager.startSequence();
@@ -62,12 +72,6 @@ public class BGameMaster : MonoBehaviour
         }
         else
         {
-            // protect player
-            this.player.isInvincible = true;
-
-            // disable player
-            this.player.isControlledBy = BPlayer.ControlParty.GameMaster;
-
             // start end game animation
             this.missionFailedManager.sequenceEndCallbacks += onMissionAccomplishedSequanceFinished;
             this.missionFailedManager.startSequence();

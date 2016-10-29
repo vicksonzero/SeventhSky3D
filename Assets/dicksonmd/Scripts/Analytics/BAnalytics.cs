@@ -6,7 +6,6 @@ using System.Text;
 using UnityEngine.SceneManagement;
 
 public class BAnalytics : MonoBehaviour {
-    public static BAnalytics i;
 
 #if UNITY_EDITOR
     [Readme(UnityEditor.MessageType.Info)]
@@ -26,6 +25,8 @@ public class BAnalytics : MonoBehaviour {
 
     public bool gameStarted = false;
 
+
+    public static BAnalytics i;
     void Awake()
     {
         if (!i)

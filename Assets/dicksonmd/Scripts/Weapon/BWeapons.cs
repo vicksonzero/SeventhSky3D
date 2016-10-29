@@ -20,6 +20,16 @@ public abstract class BWeapons :MonoBehaviour {
 
     protected BPlayer player;
 
+    public LapTimer holdWeaponTimer = new LapTimer();
+
+    public int selectedCounts = 0;
+
+    public delegate void SelectedDelegate();
+    public event SelectedDelegate selectedEvent;
+
+    public delegate void DeelectedDelegate();
+    public event DeelectedDelegate deselectedEvent;
+
     public virtual void Start()
     {
         print("weapon start");
@@ -79,5 +89,18 @@ public abstract class BWeapons :MonoBehaviour {
         {
             return false;
         }
+    }
+
+    public virtual void select()
+    {
+        this.selectedCounts++;
+        this.holdWeaponTimer.startTimer();
+        this.selectedEvent();
+    }
+
+    public virtual void deselect()
+    {
+        this.holdWeaponTimer.stopTimer();
+        this.deselectedEvent();
     }
 }

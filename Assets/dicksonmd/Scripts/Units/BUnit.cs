@@ -6,6 +6,7 @@ public class BUnit : MonoBehaviour
 {
 
     [Header("Unit")]
+    public string unitName = "unit";
     public float hp = 100;
     public float maxhp = 100;
 
@@ -17,6 +18,10 @@ public class BUnit : MonoBehaviour
 
     public delegate void DamageTakenDelegate();
     public event DamageTakenDelegate hpChanged;
+
+
+    public delegate void BeforeDieDelegate();
+    public event BeforeDieDelegate beforeDie;
 
     public bool isInvincible = false;
 
@@ -66,6 +71,7 @@ public class BUnit : MonoBehaviour
 
     public virtual void die()
     {
+        if (this.beforeDie != null) this.beforeDie();
         if (this.dieFirework) { Instantiate(this.dieFirework, this.transform.position, Quaternion.identity); }
         this.remove();
     }

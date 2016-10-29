@@ -50,7 +50,7 @@ public class BOnRadarBehind : MonoBehaviour
             Vector3 relativePosFromPlayer = this.onRadar.player.InverseTransformVector(relativePos);
             relativePosFromPlayer.z = 0;
             relativePosFromPlayer.Normalize();
-            relativePosFromPlayer *= (float)(0.5 * Screen.height * 0.90);
+            relativePosFromPlayer *= (float)(0.5 * Screen.height * 0.70);
             this.IconBehindGO.position = relativePosFromPlayer + this.onRadar.radarCanvas.position;
 
     }

@@ -37,7 +37,11 @@ public class BUISound : MonoBehaviour {
     public void playMissileAlert()
     {
         var source = this.audioSources[this.missileAlertSoundIndex];
-        if(! source.isPlaying) source.PlayOneShot(this.missileAlertSound);
+        if (!source.isPlaying)
+        {
+            source.PlayOneShot(this.missileAlertSound);
+            BUIMessage.log("Missile Alert!");
+        }
     }
 
     public void stopMissileAlert()
