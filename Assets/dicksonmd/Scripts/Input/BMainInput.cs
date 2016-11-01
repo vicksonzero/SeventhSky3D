@@ -63,14 +63,12 @@ public class BMainInput : MonoBehaviour {
         {
             this.stopDecelerate();
         }
-        
 
-#if UNITY_EDITOR
 
-        //if (Input.GetAxis("Fire1") > 0)
-        //{
-        //    this.weaponTryShoot(1);
-        //}
+        if (Input.GetAxis("Fire1") > 0)
+        {
+            this.weaponTryShoot();
+        }
 
         this.tuneCamera(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
@@ -94,7 +92,6 @@ public class BMainInput : MonoBehaviour {
         {
             this.takeScreenshot();
         }
-#endif
     }
 
     private void updatePlayerRotation()

@@ -147,7 +147,7 @@ public class BReSpawner : MonoBehaviour
                         return result;
                     }
                 });
-            BUIMessage.log("Incoming enemies: \n" + countString);
+            BUIMessage.log("Incoming enemies: " + countString);
         }
     }
 
