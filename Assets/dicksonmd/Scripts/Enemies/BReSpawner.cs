@@ -5,15 +5,16 @@ using System.Linq;
 
 public class BReSpawner : MonoBehaviour
 {
+    public bool startAutomatically = false;
+
+    [Tooltip("In seconds")]
+    public float timeBetweenWaves = 1;
 
     public int noofEnemy = 6;
     public BUnit[] enemyChoices;
     public float[] enemyWeights;
     public float roomRadius = 300;
     public float maxEnemyDistance = 400;
-
-    [Tooltip("In seconds")]
-    public float timeBetweenWaves = 1;
 
     [Header("Linking")]
     public BEnemyCounter enemyCounter;
@@ -37,7 +38,15 @@ public class BReSpawner : MonoBehaviour
         this.enemyCounter.enemyCountUpdated += this.onEnemyCountUpdated;
         StartCoroutine(this.checkDistances(5));
 
-        this.gaReadManualTime.startTimer();
+
+        if (startAutomatically)
+        {
+            this.startSpawning();
+        }
+        else
+        {
+            this.gaReadManualTime.startTimer();
+        }
     }
 
     // Update is called once per frame
@@ -90,6 +99,11 @@ public class BReSpawner : MonoBehaviour
         {
             enemy.remove();
         });
+        BEnemyMissile[] missiles = Object.FindObjectsOfType<BEnemyMissile>();
+        missiles.ToList().ForEach((missile) =>
+        {
+            missile.GetComponent<BUnit>().remove();
+        });
     }
 
     IEnumerator spawnNextWave(float delay = 0)
@@ -133,7 +147,7 @@ public class BReSpawner : MonoBehaviour
                         return result;
                     }
                 });
-            BUIMessage.log("Incoming: " + countString);
+            BUIMessage.log("Incoming enemies: \n" + countString);
         }
     }
 
@@ -153,17 +167,24 @@ public class BReSpawner : MonoBehaviour
     public void startSpawning()
     {
         //var hadStopped = false;
-        if(this.spawningTimer != null)
+        if (this.spawningTimer != null)
         {
             StopCoroutine(this.spawningTimer);
             //hadStopped = true;
         }
         this.spawningTimer = StartCoroutine(this.spawnNextWave(5));
 
-        this.gaReadManualTime.stopTimer();
+        if (this.gaReadManualTime.isRunning)
+        {
+            this.gaReadManualTime.stopTimer();
 
-        BAnalyticsGA.logReadManualTime(this.gaReadManualTime.elapsedTime);
-        BAnalyticsGA.logGameStart();
+            BAnalyticsGA.logReadManualTime(this.gaReadManualTime.elapsedTime);
+            BAnalyticsGA.logGameStart();
+        }
+        else
+        {
+            print("gaReadManualTime is not running =.=");
+        }
 
         //return hadStopped;
     }

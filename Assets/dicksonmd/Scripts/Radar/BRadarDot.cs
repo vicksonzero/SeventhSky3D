@@ -17,6 +17,7 @@ public class BRadarDot : MonoBehaviour {
         LineRenderer lineRenderer = this.gameObject.GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = false;
         lineRenderer.SetColors(this.color, this.color);
+        lineRenderer.material.color = this.color;
         lineRenderer.SetWidth(this.thickness, this.thickness);
         lineRenderer.SetVertexCount(2);
         lineRenderer.SetPosition(0, new Vector3(0,0,0));

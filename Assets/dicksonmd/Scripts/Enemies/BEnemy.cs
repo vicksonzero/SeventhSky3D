@@ -28,7 +28,7 @@ public class BEnemy : BUnit {
 
     public override void die()
     {
-        this.enemyKillCounter.add();
+        if (this.enemyKillCounter != null) this.enemyKillCounter.add();
         BAnalyticsGA.logKill(this.unitName);
         base.die();
     }
@@ -37,7 +37,7 @@ public class BEnemy : BUnit {
     {
         //print("remove()");
 
-        this.enemyCounter.logout();
+        if(this.enemyCounter !=null) this.enemyCounter.logout();
         this.GetComponent<BOnRadar>().destroyMarker();
 
         base.remove();

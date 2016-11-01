@@ -69,7 +69,7 @@ public class BOnRadar : MonoBehaviour
     public void updateInScreen()
     {
         //return (screenPos.x > 0 && screenPos.x < Screen.width && screenPos.y > 0 && screenPos.y < Screen.height);
-        this.inScreen = Vector3.Distance(this.screenPos, new Vector3(Screen.width / 2, Screen.height / 2, 0)) <= 0.5 * Screen.height;
+        this.inScreen = Vector3.Distance(this.screenPos, new Vector3(Screen.width / 2, Screen.height / 2, 0)) <= 0.4 * Screen.height;
     }
 
     public void destroyMarker()
@@ -79,6 +79,6 @@ public class BOnRadar : MonoBehaviour
 
     void OnDisable()
     {
-        this.beforeDestroyMarker();
+        if (this.beforeDestroyMarker != null) this.beforeDestroyMarker();
     }
 }

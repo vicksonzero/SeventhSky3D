@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(BOnRadar))]
 public class BOnRadarBehind : MonoBehaviour
 {
     public RectTransform IconBehind;
@@ -23,7 +24,7 @@ public class BOnRadarBehind : MonoBehaviour
         this.IconBehindGO = Instantiate(this.IconBehind, Vector3.zero, Quaternion.identity) as RectTransform;
         this.IconBehindGO.name = "IconOutOfSightGO";
         this.IconBehindGO.SetParent(this.onRadar.radarCanvas);
-        
+
     }
 
     // Update is called once per frame
@@ -40,18 +41,18 @@ public class BOnRadarBehind : MonoBehaviour
         {
             this.IconBehindGO.gameObject.SetActive(false);
         }
-        
+
     }
-    
+
     private void drawOutOfSightMarker(Vector3 relativePos)
     {
         //this.IconOutsideViewGO.gameObject.SetActive(true);
         //this.IconOutsideViewGO.rotation = Quaternion.LookRotation(relativePos);
-            Vector3 relativePosFromPlayer = this.onRadar.player.InverseTransformVector(relativePos);
-            relativePosFromPlayer.z = 0;
-            relativePosFromPlayer.Normalize();
-            relativePosFromPlayer *= (float)(0.5 * Screen.height * 0.70);
-            this.IconBehindGO.position = relativePosFromPlayer + this.onRadar.radarCanvas.position;
+        Vector3 relativePosFromPlayer = this.onRadar.player.InverseTransformVector(relativePos);
+        relativePosFromPlayer.z = 0;
+        relativePosFromPlayer.Normalize();
+        relativePosFromPlayer *= (float)(0.5 * Screen.height * 0.8);
+        this.IconBehindGO.position = relativePosFromPlayer + this.onRadar.radarCanvas.position;
 
     }
     public void destroyMarker()

@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(BOnRadar))]
 public class BOnRadarShootingRange : MonoBehaviour
 {
 
@@ -29,7 +30,7 @@ public class BOnRadarShootingRange : MonoBehaviour
     public RectTransform nameTagGO;
 
     [HideInInspector]
-    public float radar3DSize = 200;
+    //public float radar3DSize = 200;
 
     private BOnRadar onRadar;
     private BUnit unit;

@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(BOnRadar))]
 public class BOnRadarFar : MonoBehaviour
 {
 
@@ -31,7 +32,7 @@ public class BOnRadarFar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (!(this.onRadar.relativeDir.z <= 0 || !this.onRadar.inScreen) &&
             this.onRadar.relativePos.sqrMagnitude > this.onRadar.sqDistance)
