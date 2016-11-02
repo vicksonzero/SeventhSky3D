@@ -30,6 +30,12 @@ public class BOnRadar3D : MonoBehaviour
         //GameObject.Find("Radar").GetComponent<BRadar>().addMember(this);
 
         this.onRadar = this.GetComponent<BOnRadar>();
+
+        if (this.onRadar == null)
+        {
+            print("onRadar cannot be null.");
+            this.enabled = false;
+        }
         this.onRadar.beforeDestroyMarker += this.destroyMarker;
 
         this.IconRadarGO = Instantiate(this.IconRadar, this.onRadar.radar3d.position, Quaternion.identity) as Transform;
@@ -54,21 +60,24 @@ public class BOnRadar3D : MonoBehaviour
         Transform activeIcon = this.IconRadarGO;
         if (this.useDifferentBehindIcon)
         {
-            if(this.onRadar.relativeDir.z <= 0)
+            if (this.onRadar != null)
             {
-                this.IconRadarGO.gameObject.SetActive(false);
-                this.IconRadarBehindGO.gameObject.SetActive(true);
-                activeIcon = this.IconRadarBehindGO;
-            }
-            else
-            {
-                this.IconRadarGO.gameObject.SetActive(true);
-                this.IconRadarBehindGO.gameObject.SetActive(false);
-                activeIcon = this.IconRadarGO;
+                if (this.onRadar.relativeDir.z <= 0)
+                {
+                    this.IconRadarGO.gameObject.SetActive(false);
+                    this.IconRadarBehindGO.gameObject.SetActive(true);
+                    activeIcon = this.IconRadarBehindGO;
+                }
+                else
+                {
+                    this.IconRadarGO.gameObject.SetActive(true);
+                    this.IconRadarBehindGO.gameObject.SetActive(false);
+                    activeIcon = this.IconRadarGO;
+                }
             }
         }
 
-        
+
 
         //var magnitude = this.onRadar.relativePos.magnitude;
         var relativePos = this.onRadar.relativePos.normalized * this.onRadar.iconDistance;
@@ -79,8 +88,8 @@ public class BOnRadar3D : MonoBehaviour
         //}
         //else
         //{
-            this.drawRadarMarker(activeIcon, relativePos);
-            activeIcon.gameObject.SetActive(true);
+        this.drawRadarMarker(activeIcon, relativePos);
+        activeIcon.gameObject.SetActive(true);
         //}
 
 
