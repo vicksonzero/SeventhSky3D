@@ -37,8 +37,8 @@ public class BEnemy : BUnit {
     {
         //print("remove()");
 
-        if(this.enemyCounter !=null) this.enemyCounter.logout();
         this.GetComponent<BOnRadar>().destroyMarker();
+        if(this.enemyCounter !=null) this.enemyCounter.logout();
 
         base.remove();
     }
