@@ -58,7 +58,6 @@ public class BProjectile : MonoBehaviour {
             {
                 print("hit shield");
                 Instantiate(this.firework, hitpoint, Quaternion.identity);
-
                 Destroy(this.gameObject);
             }
             else

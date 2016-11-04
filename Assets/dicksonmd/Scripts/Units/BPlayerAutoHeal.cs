@@ -8,6 +8,8 @@ public class BPlayerAutoHeal : MonoBehaviour {
 
     private BPlayer player;
 
+    private float gaHealAmount = 0;
+
 	// Use this for initialization
 	void Start () {
         this.player = this.GetComponent<BPlayer>();
@@ -26,9 +28,12 @@ public class BPlayerAutoHeal : MonoBehaviour {
         {
             if(PlayerPrefs.GetInt("useAutoHeal", 0) == 1)
             {
+                var lostHp = this.player.maxhp - this.player.hp;
+                BAnalyticsGA.healedAmount += (lostHp > this.healAmount ? this.healAmount : lostHp);
                 this.player.takeDamage(-1 * this.healAmount);
             }
             yield return new WaitForSeconds(this.healInterval);
         }
     }
+
 }

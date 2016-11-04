@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System;
+using System.Linq;
 
 public class BGameMaster : MonoBehaviour
 {
@@ -52,6 +53,9 @@ public class BGameMaster : MonoBehaviour
 
         // protect player
         this.player.isInvincible = true;
+
+        // protect other enemies as well
+        FindObjectsOfType<BUnit>().ToList().ForEach(unit => unit.isInvincible = true);
 
         // disable player
         this.player.isControlledBy = BPlayer.ControlParty.GameMaster;

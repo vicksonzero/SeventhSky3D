@@ -39,6 +39,8 @@ public class BEnemyProjectile : MonoBehaviour {
                 print("hit shield");
                 Instantiate(this.firework, hitpoint, Quaternion.identity);
 
+                BAnalyticsGA.logUseShield();
+
                 Destroy(this.gameObject);
             }
             else

@@ -6,13 +6,12 @@ public class BWebLinkButton : MonoBehaviour
 {
 
     public string link = "";
-
-    private string _link = "";
+    public string linkText = "";
 
     // Use this for initialization
     void Start()
     {
-        this.GetComponentInChildren<Text>().text = link;
+        this.GetComponentInChildren<Text>().text = (linkText == "" ? link : linkText);
     }
 
     // Update is called once per frame
@@ -25,6 +24,18 @@ public class BWebLinkButton : MonoBehaviour
     {
         link = val;
         this.GetComponentInChildren<Text>().text = link;
+    }
+
+    public void setLink(string val, string linkText)
+    {
+        if (val != null)
+        {
+            link = val;
+        }
+        if (linkText != null)
+        {
+            this.GetComponentInChildren<Text>().text = linkText;
+        }
     }
 
     public void go()

@@ -177,14 +177,13 @@ public class BReSpawner : MonoBehaviour
         if (this.gaReadManualTime.isRunning)
         {
             this.gaReadManualTime.stopTimer();
-
-            BAnalyticsGA.logReadManualTime(this.gaReadManualTime.elapsedTime);
-            BAnalyticsGA.logGameStart();
+            //BAnalyticsGA.logReadManualTime(this.gaReadManualTime.elapsedTime);
         }
         else
         {
             print("gaReadManualTime is not running =.=");
         }
+        BAnalyticsGA.logGameStart();
 
         //return hadStopped;
     }

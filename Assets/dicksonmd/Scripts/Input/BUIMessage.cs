@@ -6,10 +6,12 @@ public class BUIMessage : MonoBehaviour {
 
     [Header("Config")]
     public bool testing = false;
+    public bool mirror = true;
 
     public bool isVisible = false;
     public float messageKeptTime = 5;
     public float fadeSpeed = 1;
+
 
     [Header("Linking")]
     public Text textfield;
@@ -34,13 +36,17 @@ public class BUIMessage : MonoBehaviour {
         }
         else
         {
-            this.group.alpha = Mathf.Lerp(this.group.alpha, 0.001f, fadeSpeed * Time.deltaTime);
+            this.group.alpha = Mathf.Lerp(this.group.alpha, 0.3f, fadeSpeed * Time.deltaTime);
         }
     }
 
     public static void log(string msg)
     {
         var inst = GameObject.FindObjectOfType<BUIMessage>();
+        if (inst.mirror)
+        {
+            print("Msg: " + msg);
+        }
         inst.textfield.text += "\n" + msg;
 
         inst.isVisible = true;

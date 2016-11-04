@@ -13,7 +13,13 @@ public class BTutor : MonoBehaviour
 
     public BReSpawner spawner;
 
+    public float blinkInterval = 0.2f;
+
     private BUISound soundManager;
+
+    private int currentProgress = -1;
+
+    private Coroutine tutorialRoutine;
 
     // Use this for initialization
     void Start()
@@ -21,11 +27,11 @@ public class BTutor : MonoBehaviour
         soundManager = GameObject.FindObjectOfType<BUISound>();
 
         if (spireRendezvous) spireRendezvous.onEnter += this.onArriveAtPillar;
-        this.movementUIGroup.GetComponent<CanvasGroup>().alpha = 0.05f;
-        this.attackUIGroup.GetComponent<CanvasGroup>().alpha = 0.05f;
+        this.movementUIGroup.GetComponent<CanvasGroup>().alpha = 0.01f;
+        this.attackUIGroup.GetComponent<CanvasGroup>().alpha = 0.01f;
         radar3d.gameObject.SetActive(false);
 
-        StartCoroutine(tutorial(0, 3));
+        this.tutorialRoutine = StartCoroutine(tutorial(0, 3));
     }
 
     // Update is called once per frame
@@ -36,49 +42,55 @@ public class BTutor : MonoBehaviour
 
     IEnumerator tutorial(int progress, float delay)
     {
+        print("CurrentProgress: " + currentProgress + " vs " + progress);
+        if (currentProgress < progress - 1)
+        {
+            BAnalyticsGA.logSkipTutorial();
+        }
+        this.currentProgress = progress;
         yield return new WaitForSeconds(delay);
         switch (progress)
         {
             case 0:
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Welcome to the tutorial.");
-                StartCoroutine(tutorial(1, 3));
+                this.tutorialRoutine = StartCoroutine(tutorial(1, 3));
                 break;
             case 1:
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Tilt your phone to look around and aim.");
-                StartCoroutine(tutorial(6, 5));
-                break;
-            case 6:
-                radar3d.gameObject.SetActive(true);
-                soundManager.playNewWaveAlert();
-                BUIMessage.log("Swipe this to reach more angles.");
-                StartCoroutine(tutorial(2, 5));
+                this.tutorialRoutine = StartCoroutine(tutorial(2, 5));
                 break;
             case 2:
-                radar3d.gameObject.SetActive(true);
+                showRadar3D();
+                soundManager.playNewWaveAlert();
+                BUIMessage.log("Swipe this to reach more angles.");
+                this.tutorialRoutine = StartCoroutine(tutorial(3, 5));
+                break;
+            case 3:
+                showRadar3D();
                 showMovement();
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Use these controls to move around.");
-                StartCoroutine(tutorial(3, 5));
+                this.tutorialRoutine = StartCoroutine(tutorial(4, 5));
                 break;
-            case 3:
+            case 4:
                 showRendezvous();
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Try to move near the red spire.");
                 break;
-            case 4:
-                radar3d.gameObject.SetActive(true);
+            case 5:
+                showRadar3D();
                 showMovement();
                 showAttack();
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Use these controls to attack.");
-                StartCoroutine(tutorial(5, 5));
+                this.tutorialRoutine = StartCoroutine(tutorial(6, 5));
                 break;
-            case 5:
+            case 6:
                 spawner.startSpawning();
                 soundManager.playNewWaveAlert();
-                BUIMessage.log("Try to eliminate 30 enemies as quickly as possible.");
+                BUIMessage.log("Try to eliminate 20 enemies as quickly as possible.");
                 break;
             default:
                 break;
@@ -89,8 +101,8 @@ public class BTutor : MonoBehaviour
     {
         if (unit.unitName == "Player")
         {
-            StopAllCoroutines();
-            StartCoroutine(tutorial(4, 0.5f));
+            if (this.tutorialRoutine != null) StopCoroutine(tutorialRoutine);
+            this.tutorialRoutine = StartCoroutine(tutorial(5, 0.5f));
             Destroy(spireRendezvous.gameObject);
         }
     }
@@ -103,11 +115,72 @@ public class BTutor : MonoBehaviour
 
     void showMovement()
     {
-        this.movementUIGroup.GetComponent<CanvasGroup>().alpha = 1;
+        var movementGroups = this.movementUIGroup.GetComponent<CanvasGroup>();
+        if (movementGroups.alpha != 1)
+        {
+            BlinkElement(movementGroups);
+        }
     }
 
     void showAttack()
     {
-        this.attackUIGroup.GetComponent<CanvasGroup>().alpha = 1;
+        var attackGroups = this.attackUIGroup.GetComponent<CanvasGroup>();
+        if (attackGroups.alpha != 1)
+        {
+            BlinkElement(attackGroups);
+        }
+    }
+
+    void showRadar3D()
+    {
+        if (! radar3d.gameObject.activeSelf)
+        {
+            radar3d.gameObject.SetActive(true);
+            BlinkElement(radar3d);
+        }
+    }
+
+    void BlinkElement(Transform radar3d)
+    {
+        StartCoroutine(blink2d(radar3d));
+    }
+
+    IEnumerator blink2d(Transform radar3d)
+    {
+        var renderers = radar3d.GetComponentsInChildren<LineRenderer>();
+        for (int i = 0; i < 5; i++)
+        {
+            foreach (var renderer in renderers)
+            {
+                renderer.enabled = true;
+            }
+            yield return new WaitForSeconds(this.blinkInterval);
+            foreach (var renderer in renderers)
+            {
+                renderer.enabled = false;
+            }
+            yield return new WaitForSeconds(this.blinkInterval);
+        }
+        foreach (var renderer in renderers)
+        {
+            renderer.enabled = true;
+        }
+    }
+
+    void BlinkElement(CanvasGroup buttons2D)
+    {
+        StartCoroutine(blink2d(buttons2D));
+    }
+
+    IEnumerator blink2d(CanvasGroup buttons2D)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            buttons2D.alpha = 1;
+            yield return new WaitForSeconds(this.blinkInterval);
+            buttons2D.alpha = 0.05f;
+            yield return new WaitForSeconds(this.blinkInterval);
+        }
+        buttons2D.alpha = 1;
     }
 }
