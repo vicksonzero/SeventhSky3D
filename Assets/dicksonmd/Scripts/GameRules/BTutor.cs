@@ -15,6 +15,8 @@ public class BTutor : MonoBehaviour
 
     public float blinkInterval = 0.2f;
 
+    public Transform tutorialBounds;
+
     private BUISound soundManager;
 
     private int currentProgress = -1;
@@ -83,6 +85,7 @@ public class BTutor : MonoBehaviour
                 showRadar3D();
                 showMovement();
                 showAttack();
+                Destroy(tutorialBounds.gameObject);
                 soundManager.playNewWaveAlert();
                 BUIMessage.log("Use these controls to attack.");
                 this.tutorialRoutine = StartCoroutine(tutorial(6, 5));
