@@ -8,6 +8,7 @@ public class BPersistData : MonoBehaviour {
     public string readme = "Persistent data object for shared data. Can start alone.\n\nDon't change value in inspector\nChange in prefab.";
 #endif
     public string version = "pre_2.15";
+    public bool isPublic = false;
     public string lastChangedDate = "2016-10-13";
 
     public static BPersistData i;

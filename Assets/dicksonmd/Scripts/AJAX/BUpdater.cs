@@ -21,6 +21,12 @@ public class BUpdater : MonoBehaviour
     // Use this for initialization
     IEnumerator Start()
     {
+        if (!BPersistData.i.isPublic)
+        {
+            updateButton.GetComponentInChildren<Text>().text = "Preview version";
+            this.enabled = false;
+            yield break;
+        }
         updateButton.GetComponentInChildren<Text>().text = "Checking for update...";
         WWW www = new WWW(checkForUpdateLink);
         yield return www;
