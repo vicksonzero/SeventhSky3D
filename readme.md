@@ -13,7 +13,9 @@ By Dickson Chui. Original game by TANAKA.U
 
 Download apk here:
 
-https://github.com/vicksonzero/SeventhSky3D/releases
+version 1.0.0
+
+https://github.com/vicksonzero/SeventhSky3D/releases/tag/1.0.0
 
 # Install
 
