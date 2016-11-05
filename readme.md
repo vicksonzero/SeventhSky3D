@@ -1,5 +1,8 @@
 # Seventh Sky 3D remake
 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+
+
 A full body motion Mobile Action game. Fan remake of a 2006 flash game `Seventh Sky`.
 
 By Dickson Chui. Original game by TANAKA.U
@@ -33,3 +36,10 @@ Try **stretching yourself** before playing, as this game is intense and requires
 
 
 [screenshot1]: https://github.com/vicksonzero/SeventhSky3D/blob/master/screenshots/20161001235444_p.jpg
+
+
+# License
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+
+(For now. It will be replaced with more open licenses when it matures.)

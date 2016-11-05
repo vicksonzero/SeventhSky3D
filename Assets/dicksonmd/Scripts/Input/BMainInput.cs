@@ -87,11 +87,6 @@ public class BMainInput : MonoBehaviour {
         {
             this.changeToWeapon(3);
         }
-
-        if (Input.GetButtonDown("Screenshot"))
-        {
-            this.takeScreenshot();
-        }
     }
 
     private void updatePlayerRotation()
