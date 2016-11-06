@@ -30,6 +30,12 @@ When you are playing, make sure you are in an **open area**, with plenty space f
 Avoid too much sun, as you may need to **look up:**.  
 Try **stretching yourself** before playing, as this game is intense and requires you aiming at all angles.
 
+# Technical
+
+Built with unity 5.3.3f1
+
+No iOS build settings done, so if you want to build for iOS, you probably need to change the build config a little bit.
+
 # Credits
 
 ### Original game by TANAKA.U
